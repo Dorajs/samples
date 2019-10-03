@@ -1,0 +1,32 @@
+{
+    "quality": {
+        "type": "string",
+        "default": "regular",
+        "desc": "图片质量",
+        "options": [{
+            "value": "regular",
+            "desc": "一般"
+        }, {
+            "value": "full",
+            "desc": "完整"
+        }, {
+            "value": "raw",
+            "desc": "原始"
+        }]
+    },
+    "username": {
+        "type": "string",
+        "default": "",
+        "desc": "Unsplash 用户名"
+    },
+    "password": {
+        "type": "password",
+        "default": "",
+        "desc": "Unsplash 密码"
+    },
+    "recommend": {
+        "type": "boolean",
+        "default": false,
+        "desc": "是否显示推荐"
+    }
+}

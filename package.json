@@ -1,0 +1,16 @@
+{
+  "name": "dora-addons",
+  "version": "1.0.0",
+  "description": "Offical addons repository for Dora app",
+  "main": "index.js",
+  "repository": "https://github.com:linroid/dora-addons.git",
+  "author": "linroid <linroid@gmail.com>",
+  "license": "",
+  "scripts": {
+    "build": "node index.js"
+  },
+  "dependencies": {
+    "archiver": "^3.1.1",
+    "read-package-json": "^2.1.0"
+  }
+}

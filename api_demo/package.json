@@ -1,0 +1,11 @@
+{
+  "uuid": "2f33d8de-c474-4f38-a19b-cf2cab4228cc",
+  "label": "API Demo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "linroid"
+  },
+  "dependencies": {}
+}

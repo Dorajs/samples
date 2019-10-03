@@ -1,0 +1,13 @@
+{
+  "uuid": "8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4",
+  "label": "Unsplash",
+  "version": "1.0.1",
+  "author": {
+    "name": "linroid"
+  },
+  "license": "MIT",
+  "description": "高清晰度免费图片素材，适用个人和商业",
+  "dependencies": {
+    "unsplash-js": "^5.0.0"
+  }
+}

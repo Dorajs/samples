@@ -1,0 +1,7 @@
+{
+    "name": {
+        "type": "string",
+        "default": "unkown",
+        "desc": "姓名"
+    }
+}

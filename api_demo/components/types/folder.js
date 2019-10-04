@@ -1,6 +1,6 @@
 module.exports = {
     type: 'folder',
-    style: 'simple_list',
+    style: 'simple',
     async fetch() {
         return [{
             title: 'Hello'

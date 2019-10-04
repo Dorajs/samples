@@ -2,7 +2,7 @@ const fs = require('fs')
 const path = require('path')
 module.exports = {
     type: 'folder',
-    style: 'simple_list',
+    style: 'simple',
     beforeCreate() {
         console.log(this)
         this.title = 'Files'

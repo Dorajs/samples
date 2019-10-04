@@ -1,18 +1,21 @@
 module.exports = {
     type: 'folder',
-    style: 'simple_list',
+    style: 'simple',
     async fetch() {
         return [{
+            title: 'component',
+            route: $route.folder('component')
+        }, {
             title: 'File system',
             route: $route.folder('file', {
                 path: '/'
             })
         }, {
-            title: 'component',
-            route: $route.folder('component')
-        }, {
             title: '$ui',
             route: $route.folder('ui')
+        }, {
+            title: 'icon',
+            route: $route.folder('icons')
         }]
     }
 }

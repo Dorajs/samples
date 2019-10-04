@@ -23,7 +23,7 @@ module.exports = {
                         color: item.color,
                         aspect: (item.width * 1.0 / item.height).toFixed(3),
                     }),
-                    desc: item.description || item.alt_description,
+                    summary: item.description || item.alt_description,
                     link: item.links.html,
                     author: {
                         name: item.user.name,

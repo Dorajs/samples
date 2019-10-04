@@ -1,0 +1,11 @@
+{
+  "uuid": "36c0507b-d500-475b-98e9-827eae523448",
+  "label": "Readhub",
+  "version": "1.0.0",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "linroid"
+  },
+  "dependencies": {}
+}

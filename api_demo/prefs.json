@@ -2,6 +2,6 @@
     "name": {
         "type": "string",
         "default": "unkown",
-        "desc": "姓名"
+        "title": "姓名"
     }
 }

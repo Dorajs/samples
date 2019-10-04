@@ -2,16 +2,16 @@
     "quality": {
         "type": "string",
         "default": "regular",
-        "desc": "图片质量",
+        "title": "图片质量",
         "options": [{
             "value": "regular",
-            "desc": "一般"
+            "title": "一般"
         }, {
             "value": "full",
-            "desc": "完整"
+            "title": "完整"
         }, {
             "value": "raw",
-            "desc": "原始"
+            "title": "原始"
         }]
     }
 }

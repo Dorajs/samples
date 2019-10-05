@@ -35,18 +35,18 @@ module.exports = {
             })
         }, {
             title: 'this.title',
-            method: 'updateTitle'
+            onClick: 'updateTitle'
         }, {
             title: 'this.subtitle',
-            method: 'updateSubtitle'
+            onClick: 'updateSubtitle'
         }]
     },
     created() {
         this.menus = [{
             id: 'refresh',
             title: 'Update title',
-            method: 'updateTitle',
-            expand: true
+            onClick: 'updateTitle',
+            asAction: true
         }]
     },
     async updateTitle() {

@@ -9,7 +9,7 @@ module.exports = {
                 id: name,
                 title: `$icon('${name}', '${this.color()}')`,
                 thumb: $icon(name, this.color()),
-                method: 'copy'
+                onClick: 'copy'
             }
         })
     },
@@ -17,8 +17,8 @@ module.exports = {
         console.log($storage.all())
         this.menus = [{
             title: 'Set color',
-            method: 'setColor',
-            expand: true
+            onClick: 'setColor',
+            asAction: true
         }]
     },
     copy(item) {

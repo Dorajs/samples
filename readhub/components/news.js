@@ -1,8 +1,8 @@
 module.exports = {
     type: 'folder',
     style: 'article',
-    async fetch(page) {
-        let resp = await $http.get(`https://api.readhub.cn/${this.args.column}?lastCursor=${page || ''}&pageSize=${this.pageSize}`)
+    async fetch({ args }) {
+        let resp = await $http.get(`https://api.readhub.cn/${args.column}?lastCursor=${page || ''}&pageSize=${this.pageSize}`)
         let list = resp.data.data
         let items = list.map(data => {
             return {
@@ -14,7 +14,7 @@ module.exports = {
                     name: data.authorName
                 },
                 summary: data.summary,
-                route: $route.article(null, {
+                route: $route(null, {
                     id: data.id,
                     url: data.mobileUrl
                 })

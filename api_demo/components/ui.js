@@ -6,7 +6,7 @@ module.exports = {
             title: '$ui.toast(title: string)',
             onClick: 'toast'
         }, {
-            title: '$ui.alert(title: string, message: string)',
+            title: '$ui.alert( message: string)',
             onClick: 'alert'
         }, {
             title: '$ui.confirm(title: string, message: string)',
@@ -26,7 +26,7 @@ module.exports = {
         $ui.toast('Hello World!')
     },
     async alert() {
-        await $ui.alert('Dora Alert', 'Hello World')
+        await $ui.alert('Hello World')
         console.log('alert finished')
     },
     async confirm() {
@@ -38,7 +38,7 @@ module.exports = {
         $ui.toast(`Hello ${name}`)
     },
     navTo() {
-        $ui.navTo($route.folder('index'))
+        $ui.navTo($route('index'))
     },
     openPrefs() {
         $ui.openPrefs()

@@ -20,7 +20,7 @@ module.exports = {
                     name: data.authorName
                 },
                 summary: `${cities} 等地共更新了 ${jobCnt} 个职位，待遇集中在 ${data.salaryLower}-${data.salaryUpper}k, 一般要求 ${data.experienceLower}-${data.experienceUpper} 年经验`,
-                route: $route.folder('jobs', {
+                route: $route('jobs', {
                     id: data.id,
                     jobs: data.jobsArray
                 })

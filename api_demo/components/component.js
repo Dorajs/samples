@@ -4,25 +4,25 @@ module.exports = {
     async fetch() {
         return [{
             title: 'folder',
-            route: $route.folder('types/folder')
+            route: $route('types/folder')
         }, {
             title: 'video',
-            route: $route.video(null, {
+            route: $route('@video', {
                 url: 'http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/gear5/prog_index.m3u8',
                 thumb: 'https://goss.veer.com/creative/vcg/veer/800water/veer-310433275.jpg'
             })
         }, {
             title: 'audio',
-            route: $route.audio('types/audio')
+            route: $route('types/audio')
         }, {
             title: 'article',
-            route: $route.article(null, {
+            route: $route('@article', {
                 url: 'https://dorajs.com/',
                 title: 'Dora 官网'
             })
         }, {
             title: 'image',
-            route: $route.image(null, {
+            route: $route('@image', {
                 url: 'https://raw.githubusercontent.com/linroid/dora-vscode/master/docs/explorer.png',
                 summary: 'Dora 的 VSCode 开发插件',
                 title: 'Dora vscode extension',
@@ -30,7 +30,7 @@ module.exports = {
                 author: {
                     name: 'linroid',
                     avatar: 'https://avatars0.githubusercontent.com/u/3192142?s=460&v=4',
-                    route: $route.url('https://github.com/linroid')
+                    route: $route('https://github.com/linroid')
                 }
             })
         }, {

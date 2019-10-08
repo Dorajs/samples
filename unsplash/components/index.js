@@ -18,7 +18,7 @@ module.exports = {
                 }
                 return {
                     title: item.description,
-                    route: $route.image('image', {
+                    route: $route.image('@image', {
                         url: image_url,
                         color: item.color,
                         aspect: (item.width * 1.0 / item.height).toFixed(3),

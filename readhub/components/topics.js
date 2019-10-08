@@ -10,7 +10,7 @@ module.exports = {
                 time: data.createdAt,
                 title: data.title,
                 summary: data.summary,
-                route: $route.article('topic_detail', {
+                route: $route('topic_detail', {
                     id: data.id
                 })
             }

@@ -1,6 +1,6 @@
 module.exports = {
-    fetch() {
-        return this.args.jobs.map(job => {
+    fetch({ args }) {
+        return args.jobs.map(job => {
             return {
                 id: job.id,
                 title: job.title,

@@ -14,7 +14,7 @@ module.exports = {
                 id: program.id,
                 title: program.title,
                 time: program.created_at,
-                thumb: program.cover || program.thumbnail,
+                image: program.cover || program.thumbnail,
                 route: program.audio ? $route('@audio', {
                     id: program.audio.id,
                     url: program.audio.src

@@ -5,15 +5,15 @@ module.exports = {
         return [{
                 title: '热门话题',
                 route: $route('topics', {}),
-                thumb: $icon('cake')
+                image: $icon('cake')
             }, {
                 title: '科技动态',
                 route: $route('news', { column: 'news' }),
-                thumb: $icon('mood')
+                image: $icon('mood')
             }, {
                 title: '开发者',
                 route: $route('news', { column: 'technews' }),
-                thumb: $icon('android')
+                image: $icon('android')
             },
             {
                 title: '区块链',
@@ -22,7 +22,7 @@ module.exports = {
             {
                 title: '招聘行情',
                 route: $route('hire', {}),
-                thumb: $icon('plus_one')
+                image: $icon('plus_one')
             }
 
         ]

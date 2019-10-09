@@ -1,7 +1,7 @@
 module.exports = {
     type: 'folder',
     style: 'article',
-    async fetch(page) {
+    async fetch({ page }) {
         let resp = await $http.get(`https://api.readhub.cn/jobs?lastCursor=${page || ''}&pageSize=${this.pageSize}`)
         let list = resp.data.data
         let items = list.map(data => {

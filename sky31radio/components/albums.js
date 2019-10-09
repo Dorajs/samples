@@ -7,7 +7,7 @@ module.exports = {
                 id: album.id,
                 title: album.name,
                 time: album.created_at,
-                thumb: album.cover,
+                image: album.cover,
                 route: $route('programs', {
                     album_id: album.id
                 })

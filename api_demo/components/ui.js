@@ -15,6 +15,9 @@ module.exports = {
             title: '$ui.prompt(title:string, hint: string, value: string)',
             onClick: 'prompt'
         }, {
+            title: '$ui.select(title:string, options: [])',
+            onClick: 'select'
+        }, {
             title: '$ui.navTo()',
             onClick: 'navTo'
         }, {
@@ -36,6 +39,16 @@ module.exports = {
     async prompt() {
         let name = await $ui.prompt('Dora Prompt', 'Input your name', '')
         $ui.toast(`Hello ${name}`)
+    },
+    async select() {
+        let option = await $ui.select('Dora select', [{
+            id: 'option2',
+            title: 'Option 1'
+        }, {
+            id: 'option2',
+            title: 'Option 2'
+        }])
+        $ui.toast(`Selected ${option.title}`)
     },
     navTo() {
         $ui.navTo($route('index'))

@@ -15,7 +15,7 @@ module.exports = {
             const stat = fs.statSync(file)
             return {
                 title: name,
-                thumb: stat.isDirectory() ? $icon('folder', 'yellow') : $icon('insert_drive_file', 'black'),
+                image: stat.isDirectory() ? $icon('folder', 'yellow') : $icon('insert_drive_file', 'black'),
                 route: stat.isDirectory() ? $route('file', { path: file }) : null
             }
         })

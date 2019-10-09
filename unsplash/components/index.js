@@ -6,7 +6,7 @@ module.exports = {
         let photos = await $http.get('https://api.unsplash.com/photos', {
             page: page
         })
-        let quality = $pref.get('quality')
+        let quality = $prefs.get('quality')
         return {
             nextPage: page + 1,
             items: photos.data.map((item) => {
@@ -18,7 +18,7 @@ module.exports = {
                 }
                 return {
                     title: item.description,
-                    route: $route.image('@image', {
+                    route: $route('@image', {
                         url: image_url,
                         color: item.color,
                         aspect: (item.width * 1.0 / item.height).toFixed(3),
@@ -28,9 +28,9 @@ module.exports = {
                     author: {
                         name: item.user.name,
                         avatar: item.user.profile_image.medium,
-                        route: $route.url(item.user.links.html)
+                        route: $route(item.user.links.html)
                     },
-                    thumb: {
+                    image: {
                         url: item.urls.small,
                         color: item.color,
                         aspect: (item.width * 1.0 / item.height).toFixed(3)

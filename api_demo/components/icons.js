@@ -8,7 +8,7 @@ module.exports = {
             return {
                 id: name,
                 title: `$icon('${name}', '${this.color()}')`,
-                thumb: $icon(name, this.color()),
+                image: $icon(name, this.color()),
                 onClick: 'copy'
             }
         })

@@ -7,7 +7,7 @@ module.exports = {
                 id: anchor.id,
                 title: anchor.nickname,
                 time: anchor.created_at,
-                thumb: anchor.avatar,
+                image: anchor.avatar,
                 number: anchor.program_count,
                 route: $route('programs', {
                     user_id: anchor.id

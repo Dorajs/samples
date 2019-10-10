@@ -1,5 +1,6 @@
 {
   "uuid": "8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4",
+  "name": "dora-unsplash",
   "label": "Unsplash",
   "version": "1.0.1",
   "author": {
@@ -7,6 +8,13 @@
   },
   "license": "MIT",
   "description": "高清晰度免费图片素材，适用个人和商业",
+  "engines": {
+    "dora": ">=1.0.0"
+  },
+  "keywords": ["Dora", "dora-addon"],
+  "icon": "assets/icon.png",
+  "prefs": "assets/prefs.json",
+  "main": "main.js",
   "dependencies": {
     "unsplash-js": "^5.0.0"
   }

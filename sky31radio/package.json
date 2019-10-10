@@ -7,5 +7,12 @@
   "author": {
     "name": "linroid"
   },
+  "engines": {
+    "dora": ">=1.0.0"
+  },
+  "keywords": ["Dora", "dora-addon"],
+  "icon": "assets/icon.png",
+  "prefs": "assets/prefs.json",
+  "main": "main.js",
   "dependencies": {}
 }

@@ -82,18 +82,18 @@ let promises = fs.readdirSync('./')
                 recursive: true
             });
         }
-        const doraFile = path.resolve(saveDir, `${data.label}.dora`)
+        const doraFile = path.resolve(saveDir, `${data.displayName}.dora`)
         await buildPackage(dir, doraFile)
         let iconFile = path.resolve(dir, data.icon)
         fs.copyFileSync(iconFile, path.resolve(saveDir, path.basename(iconFile)))
         return {
-            label: data.label,
+            displayName: data.displayName,
             uuid: data.uuid,
             description: data.description,
             version: data.version,
             author: data.author,
             size: getFilesizeInBytes(doraFile),
-            file: `${endpoint}/${data.uuid}/${data.version}/${data.label}.dora`,
+            file: `${endpoint}/${data.uuid}/${data.version}/${data.displayName}.dora`,
             url: `https://github.com/linroid/dora-addons/tree/master/${file}`,
             icon: iconFile ? `${endpoint}/${data.uuid}/${data.version}/${path.basename(iconFile)}` : null
         }

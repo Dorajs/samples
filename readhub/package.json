@@ -1,6 +1,6 @@
 {
   "uuid": "36c0507b-d500-475b-98e9-827eae523448",
-  "label": "Readhub",
+  "displayName": "Readhub",
   "version": "1.0.0",
   "description": "每天三分钟的科技新闻聚合阅读",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "dora": ">=${dora-version}"
   },
   "keywords": ["Dora", "dora-addon"],
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "main": "main.js",
   "dependencies": {}
 }

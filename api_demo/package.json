@@ -15,7 +15,7 @@
     "Dora",
     "dora-addon"
   ],
-  "icon": "icon.png",
+  "icon": "assets/icon.png",
   "main": "main.js",
   "dependencies": {}
 }

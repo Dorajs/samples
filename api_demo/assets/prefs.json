@@ -1,36 +1,36 @@
 {
-    "name": {
-        "type": "string",
-        "default": "unkown",
-        "title": "姓名"
-    },
-    "age": {
-        "type": "number",
-        "default": 0,
-        "title": "年龄"
-    },
-    "show_recommend": {
-        "type": "boolean",
-        "default": true,
-        "title": "是否显示推荐"
-    },
-    "password": {
-        "type": "password",
-        "default": null,
-        "title": "密码"
-    },
-    "education": {
-        "type": "string",
-        "default": "bachelor",
-        "title": "学历",
-        "options": [{
-                "value": "bachelor",
-                "title": "本科"
-            },
-            {
-                "value": "master",
-                "title": "研究生"
-            }
-        ]
-    }
+  "name": {
+    "type": "string",
+    "default": "unkown",
+    "title": "姓名"
+  },
+  "age": {
+    "type": "number",
+    "default": 0,
+    "title": "年龄"
+  },
+  "show_recommend": {
+    "type": "boolean",
+    "default": true,
+    "title": "是否显示推荐"
+  },
+  "password": {
+    "type": "password",
+    "default": null,
+    "title": "密码"
+  },
+  "education": {
+    "type": "string",
+    "default": "bachelor",
+    "title": "学历",
+    "options": [{
+        "value": "bachelor",
+        "title": "本科"
+      },
+      {
+        "value": "master",
+        "title": "研究生"
+      }
+    ]
+  }
 }

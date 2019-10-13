@@ -4,25 +4,25 @@ module.exports = {
   fetch() {
     return [{
       title: '$ui.toast(title: string)',
-      onClick: 'toast'
+      onClick: this.toast
     }, {
       title: '$ui.alert( message: string)',
-      onClick: 'alert'
+      onClick: this.alert
     }, {
       title: '$ui.confirm(title: string, message: string)',
-      onClick: 'confirm'
+      onClick: this.confirm
     }, {
-      title: '$ui.prompt(title:string, hint: string, value: string)',
-      onClick: 'prompt'
+      title: '$ui.prompt(title: string, hint: string, value: string)',
+      onClick: this.prompt
     }, {
-      title: '$ui.select(title:string, options: [])',
-      onClick: 'select'
+      title: '$ui.select(title: string, options: [])',
+      onClick: this.select
     }, {
       title: '$ui.navTo()',
-      onClick: 'navTo'
+      onClick: this.navTo
     }, {
       title: '$ui.openPrefs()',
-      onClick: 'openPrefs'
+      onClick: this.openPrefs
     }]
   },
   toast() {

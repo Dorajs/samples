@@ -9,7 +9,7 @@ module.exports = {
         id: name,
         title: name,
         image: $icon(name, this.color()),
-        onClick: 'copy'
+        onClick: this.copy
       }
     })
   },
@@ -17,7 +17,7 @@ module.exports = {
     console.log($storage.all())
     this.menus = [{
       title: 'Set color',
-      onClick: 'setColor',
+      onClick: this.setColor,
       asAction: true
     }]
   },

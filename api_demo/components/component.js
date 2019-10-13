@@ -35,17 +35,17 @@ module.exports = {
       })
     }, {
       title: 'this.title',
-      onClick: 'updateTitle'
+      onClick: this.updateTitle
     }, {
       title: 'this.subtitle',
-      onClick: 'updateSubtitle'
+      onClick: this.updateSubtitle
     }]
   },
   created() {
     this.menus = [{
       id: 'refresh',
       title: 'Update title',
-      onClick: 'updateTitle',
+      onClick: this.updateTitle,
       asAction: true
     }]
   },

@@ -1,6 +1,5 @@
 module.exports = {
-  type: 'folder',
-  style: 'simple',
+  type: 'list',
   async fetch() {
     return [{
       title: 'component',

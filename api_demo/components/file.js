@@ -15,10 +15,17 @@ module.exports = {
       const stat = fs.statSync(file)
       return {
         title: name,
-        image: stat.isDirectory() ? $icon('folder', 'yellow') : $icon('insert_drive_file', 'black'),
-        route: stat.isDirectory() ? $route('file', {
-          path: file
-        }) : null
+        thumb: stat.isDirectory() ? $icon('folder', 'yellow') : $icon('insert_drive_file', 'black'),
+        onClick: () => {
+          console.log($ui)
+          if (stat.isDirectory()) {
+            $ui.navTo($route('file', {
+              path: file
+            }))
+          } else {
+            $ui.viewFile('/hahahha')
+          }
+        }
       }
     })
     return items

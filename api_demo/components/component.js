@@ -1,10 +1,9 @@
 module.exports = {
-  type: 'folder',
-  style: 'simple',
+  type: 'list',
   async fetch() {
     return [{
-      title: 'folder',
-      route: $route('types/folder')
+      title: 'list',
+      route: $route('types/list')
     }, {
       title: 'video',
       route: $route('@video', {

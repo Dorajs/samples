@@ -1,6 +1,5 @@
 module.exports = {
-  type: 'folder',
-  style: 'article',
+  type: 'list',
   async fetch({ page }) {
     let resp = await $http.get(`https://api.readhub.cn/jobs?lastCursor=${page || ''}&pageSize=${this.pageSize}`)
     let list = resp.data.data
@@ -15,6 +14,7 @@ module.exports = {
         id: data.id,
         time: data.publishDate,
         title: data.jobTitle,
+        style: 'article',
         link: data.mobileUrl,
         author: {
           name: data.authorName

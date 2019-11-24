@@ -1,5 +1,6 @@
 {
   "uuid": "36c0507b-d500-475b-98e9-827eae523448",
+  "name": "@dora-addon/readhub",
   "displayName": "Readhub",
   "version": "1.0.0",
   "description": "每天三分钟的科技新闻聚合阅读",
@@ -8,7 +9,7 @@
     "name": "linroid"
   },
   "engines": {
-    "dora": ">=${dora-version}"
+    "dora": ">=1.0.0"
   },
   "keywords": ["Dora", "dora-addon"],
   "icon": "assets/icon.png",

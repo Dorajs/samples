@@ -1,19 +1,18 @@
 module.exports = {
-  type: 'folder',
-  style: 'bottom_tab',
+  type: 'bottom_tab',
   fetch() {
     return [{
         title: '热门话题',
         route: $route('topics', {}),
-        image: $icon('cake')
+        thumb: $icon('cake')
       }, {
         title: '科技动态',
         route: $route('news', { column: 'news' }),
-        image: $icon('mood')
+        thumb: $icon('mood')
       }, {
         title: '开发者',
         route: $route('news', { column: 'technews' }),
-        image: $icon('android')
+        thumb: $icon('android')
       },
       {
         title: '区块链',
@@ -22,7 +21,7 @@ module.exports = {
       {
         title: '招聘行情',
         route: $route('hire', {}),
-        image: $icon('plus_one')
+        thumb: $icon('plus_one')
       }
 
     ]

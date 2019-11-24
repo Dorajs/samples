@@ -1,6 +1,6 @@
 {
   "uuid": "8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4",
-  "name": "dora-unsplash",
+  "name": "@dora-addon/unsplash",
   "displayName": "Unsplash",
   "version": "1.0.1",
   "author": {

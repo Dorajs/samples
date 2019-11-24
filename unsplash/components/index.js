@@ -1,6 +1,6 @@
 module.exports = {
-  type: 'folder',
-  style: 'gallery',
+  type: 'list',
+  translucent: true,
   async fetch(page) {
     console.log($http)
     let photos = await $http.get('https://api.unsplash.com/photos', {
@@ -23,6 +23,7 @@ module.exports = {
             color: item.color,
             aspect: (item.width * 1.0 / item.height).toFixed(3),
           }),
+          style: 'gallery',
           summary: item.description || item.alt_description,
           link: item.links.html,
           author: {
@@ -30,11 +31,9 @@ module.exports = {
             avatar: item.user.profile_image.medium,
             route: $route(item.user.links.html)
           },
-          image: {
-            url: item.urls.small,
-            color: item.color,
-            aspect: (item.width * 1.0 / item.height).toFixed(3)
-          }
+          thumb: item.urls.small,
+          color: item.color,
+          aspect: (item.width * 1.0 / item.height).toFixed(3)
         }
       })
     }

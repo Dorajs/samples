@@ -1,6 +1,5 @@
 module.exports = {
-  type: 'folder',
-  style: 'top_tab',
+  type: 'top_tab',
   async fetch() {
     return [{
       title: '节目',

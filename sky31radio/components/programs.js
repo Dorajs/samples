@@ -1,6 +1,6 @@
 const querystring = require('querystring')
 module.exports = {
-  style: 'simple',
+  style: 'list',
   async fetch({ page, args }) {
     let params = {
       page: page || 1
@@ -14,7 +14,8 @@ module.exports = {
         id: program.id,
         title: program.title,
         time: program.created_at,
-        image: program.cover || program.thumbnail,
+        style: 'simple',
+        thumb: program.cover || program.thumbnail,
         route: program.audio ? $route('@audio', {
           id: program.audio.id,
           url: program.audio.src

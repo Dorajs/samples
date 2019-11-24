@@ -1,4 +1,5 @@
 {
-    "asi": true,
-    "esversion": 6
+  "asi": true,
+  "esversion": 8,
+  "indent": true
 }

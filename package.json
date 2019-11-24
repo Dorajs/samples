@@ -7,9 +7,10 @@
   "author": "linroid <linroid@gmail.com>",
   "license": "",
   "scripts": {
-    "build": "node index.js"
+    "build": "dora repo --url https://repo.dorajs.com/"
   },
   "dependencies": {
+    "@dora-app/cli": "^1.1.1",
     "archiver": "^3.1.1",
     "read-package-json": "^2.1.0"
   }

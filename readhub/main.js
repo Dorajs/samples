@@ -1,3 +1,3 @@
-Dora.mixin({
+$dora.mixin({
     pageSize: 20
 })

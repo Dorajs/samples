@@ -23,7 +23,7 @@ module.exports = {
               path: file
             }))
           } else {
-            $ui.viewFile('/hahahha')
+            $ui.viewFile(file)
           }
         }
       }

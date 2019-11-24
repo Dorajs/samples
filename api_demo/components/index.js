@@ -12,8 +12,8 @@ module.exports = {
     }, {
       title: '$assets',
       route: $route('@image', {
-        summary: "$assets('steve-halama.jpg')",
-        url: $assets('steve-halama.jpg'),
+        summary: "$assets('nokia.jpeg')",
+        url: $assets('nokia.jpeg'),
         author: {
           avatar: 'https://images.unsplash.com/profile-1559352348408-f8710c0ac313?dpr=1&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff',
           name: 'Steve Halama',

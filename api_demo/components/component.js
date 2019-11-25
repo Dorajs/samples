@@ -15,10 +15,7 @@ module.exports = {
       route: $route('types/audio')
     }, {
       title: 'article',
-      route: $route('@article', {
-        url: 'https://dorajs.com/',
-        title: 'Dora 官网'
-      })
+      route: $route('types/article')
     }, {
       title: 'image',
       route: $route('@image', {

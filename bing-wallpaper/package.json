@@ -1,0 +1,31 @@
+{
+  "name": "@dora-addon/bing-wallpaper",
+  "displayName": "Bing Wallpaper",
+  "version": "1.0.0",
+  "uuid": "c5258f19-e0a1-4678-9880-04d87a69e0c8",
+  "description": "",
+  "icon": "assets/bing.png",
+  "prefs": "assets/prefs.json",
+  "main": "main.js",
+  "license": "UNLICENSED",
+  "author": {
+    "name": "linroid",
+    "email": "linroid@gmail.com",
+    "url": "https://linroid.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "homepage": "",
+  "engines": {
+    "dora": ">=1.0.0"
+  },
+  "keywords": [
+    "Dora",
+    "dora-addon"
+  ],
+  "dependencies": {
+    "wonderful-bing-wallpaper": "^0.2.1"
+  }
+}

@@ -3,7 +3,7 @@
   "displayName": "Bing Wallpaper",
   "version": "1.0.0",
   "uuid": "c5258f19-e0a1-4678-9880-04d87a69e0c8",
-  "description": "",
+  "description": "Bing 每日壁纸",
   "icon": "assets/bing.png",
   "prefs": "assets/prefs.json",
   "main": "main.js",

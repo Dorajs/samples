@@ -1,31 +1,23 @@
 module.exports = {
-  type: 'list',
-  async fetch() {
+  type: 'bottom_tab',
+  title: 'API Demo',
+  fetch() {
     return [{
-      title: 'component',
-      route: $route('component')
+      title: '组件',
+      route: $route('component'),
+      thumb: $assets('component.svg')
     }, {
-      title: 'File system',
-      route: $route('file', {
-        path: '/'
-      })
-    }, {
-      title: '$assets',
-      route: $route('@image', {
-        summary: "$assets('nokia.jpeg')",
-        url: $assets('nokia.jpeg'),
-        author: {
-          avatar: 'https://images.unsplash.com/profile-1559352348408-f8710c0ac313?dpr=1&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff',
-          name: 'Steve Halama',
-          url: 'https://unsplash.com/@steve3p_0'
-        }
-      })
-    }, {
-      title: '$ui',
-      route: $route('ui')
+      title: '全局函数',
+      route: $route('global'),
+      thumb: $assets('global.svg')
     }, {
       title: 'icons',
-      route: $route('icons')
+      route: $route('icons'),
+      thumb: $icon('mood')
+    }, {
+      title: '更多',
+      route: $route('more'),
+      thumb: $icon('more_vert')
     }]
   }
 }

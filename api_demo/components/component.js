@@ -1,15 +1,21 @@
 module.exports = {
   type: 'list',
+  menus: [{
+    id: 'update_menu',
+    title: 'Menu',
+    onClick: async () => {
+      let newTitle = await $ui.prompt('Update title', 'new title', this.title)
+      this.title = newTitle
+    },
+    asAction: false
+  }],
   async fetch() {
     return [{
       title: 'list',
       route: $route('types/list')
     }, {
       title: 'video',
-      route: $route('@video', {
-        url: 'http://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/gear5/prog_index.m3u8',
-        image: 'https://goss.veer.com/creative/vcg/veer/800water/veer-310433275.jpg'
-      })
+      route: $route('types/video')
     }, {
       title: 'audio',
       route: $route('types/audio')
@@ -29,28 +35,6 @@ module.exports = {
           route: $route('https://github.com/linroid')
         }
       })
-    }, {
-      title: 'this.title',
-      onClick: this.updateTitle
-    }, {
-      title: 'this.subtitle',
-      onClick: this.updateSubtitle
     }]
-  },
-  created() {
-    this.menus = [{
-      id: 'refresh',
-      title: 'Update title',
-      onClick: this.updateTitle,
-      asAction: true
-    }]
-  },
-  async updateTitle() {
-    let newTitle = await $ui.prompt('Update title', 'new title', this.title)
-    this.title = newTitle
-  },
-  async updateSubtitle() {
-    let newSubtitle = await $ui.prompt('Update title', 'new subtitle', this.subtitle || '')
-    this.subtitle = newSubtitle
   }
 }

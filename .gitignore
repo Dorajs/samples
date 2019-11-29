@@ -95,3 +95,4 @@ typings/
 *.log
 dist/
 package-lock.json
+.vscode

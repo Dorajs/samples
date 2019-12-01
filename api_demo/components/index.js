@@ -1,5 +1,5 @@
 module.exports = {
-  type: 'bottom_tab',
+  type: 'bottomTab',
   title: 'API Demo',
   fetch() {
     return [{

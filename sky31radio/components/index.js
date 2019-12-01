@@ -1,5 +1,5 @@
 module.exports = {
-  type: 'top_tab',
+  type: 'topTab',
   async fetch() {
     return [{
       title: '节目',

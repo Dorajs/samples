@@ -1,5 +1,5 @@
 module.exports = {
-  type: 'bottom_tab',
+  type: 'bottomTab',
   fetch() {
     return [{
         title: '热门话题',

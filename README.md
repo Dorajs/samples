@@ -2,4 +2,4 @@
 
 Official addon repository for [Dora](https://dorajs.com)
 
-Repo url: `https://repo.dorajs.com/all.json`
+Repo url: `https://repo.dorajs.com/index.json`

@@ -7,9 +7,11 @@ module.exports = {
       {
         title: '样式：simple',
         style: 'category',
-        menu: {
+        action: {
           title: '查看代码',
-          onClick: () => {}
+          onClick: () => {
+            $ui.toast("TODO: not implemented")
+          }
         }
       },
       {
@@ -26,10 +28,10 @@ module.exports = {
       {
         title: '样式：icon',
         style: 'category',
-        menu: {
+        action: {
           title: '查看代码',
           onClick: () => {
-
+            $ui.toast("TODO: not implemented")
           }
         }
       }, {
@@ -49,9 +51,9 @@ module.exports = {
       {
         title: '样式：vod',
         style: 'category',
-        menu: {
+        action: {
           title: '查看代码',
-          onClick: () => {}
+          onClick: () => { $ui.toast("TODO: not implemented") }
         }
       }, {
         title: '冰雪奇缘2',
@@ -70,14 +72,14 @@ module.exports = {
       {
         title: '样式：live',
         style: 'category',
-        menu: {
+        action: {
           title: '查看代码',
-          onClick: () => {}
+          onClick: () => { $ui.toast("TODO: not implemented") }
         }
       }, {
         title: 'Coding...',
         style: 'live',
-        thumb: $assets('./nokia.jpeg'),
+        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         label: '英雄联盟',
         viewerCount: '1.1k',
         author: {
@@ -87,7 +89,7 @@ module.exports = {
       }, {
         title: 'Coding...',
         style: 'live',
-        thumb: $assets('./nokia.jpeg'),
+        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         label: '英雄联盟',
         author: {
           name: 'linroid',
@@ -96,7 +98,7 @@ module.exports = {
       }, {
         title: 'Coding...',
         style: 'live',
-        thumb: $assets('./nokia.jpeg'),
+        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         spanCount: 12,
         label: '英雄联盟',
         author: {
@@ -104,14 +106,51 @@ module.exports = {
           avatar: 'https://linroid.com/avatar.png'
         }
       },
+      // richMedia
+      {
+        title: '样式：richMedia',
+        style: 'category',
+        action: {
+          title: '查看代码',
+          onClick: () => { $ui.toast("TODO: not implemented") }
+        }
+      }, {
+        title: 'Title goes here',
+        style: 'richMedia',
+        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        rating: {
+          score: 4.5,
+          total: 5,
+          text: '4.5(1000)'
+        },
+        summary: 'Secondary line text Lorem ipsum dolor sit amet, nec no nominavi scaevola. Per et sint sapientem, nobis perpetua salutandi mei te.',
+        subtitle: 'Subtitle goes here',
+        tags: [{
+          title: 'Tag 1',
+          onClick: this.simpleOnClick
+        }, {
+          title: 'Tag 2',
+          onClick: this.simpleOnClick
+        }, {
+          title: 'Tag 3',
+          onClick: this.simpleOnClick
+        }],
+        actions: [{
+          title: 'Action1',
+          onClick: this.simpleOnClick
+        }, {
+          title: 'Action 2',
+          onClick: this.simpleOnClick
+        }]
+      },
       // category
       {
         title: '样式：gallery',
         style: 'category',
-        menu: {
+        action: {
           title: '查看代码',
           onClick: () => {
-
+            $ui.toast("TODO: not implemented")
           }
         }
       }, {
@@ -122,7 +161,29 @@ module.exports = {
           name: 'linroid',
           avatar: 'https://avatars0.githubusercontent.com/u/3192142?s=460&v=4'
         }
+      },
+      // category
+      {
+        title: '样式：book',
+        style: 'category',
+        action: {
+          title: '查看代码',
+          onClick: () => {
+            $ui.toast("TODO: not implemented")
+          }
+        }
+      }, {
+        thumb: 'https://img1.doubanio.com/view/subject/l/public/s2768378.jpg',
+        title: '三体',
+        style: 'book'
+      }, {
+        thumb: 'https://img3.doubanio.com/view/subject/l/public/s8958650.jpg',
+        title: 'JavaScript高级程序设计',
+        style: 'book'
       }
     ]
+  },
+  simpleOnClick(data) {
+    $ui.toast(`onClick ${JSON.stringify(data)}`)
   }
 }

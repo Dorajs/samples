@@ -90,8 +90,6 @@ typings/
 .dynamodb/
 
 .output
-
-*.lock
 *.log
 dist/
 package-lock.json

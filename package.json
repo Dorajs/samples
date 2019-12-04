@@ -1,7 +1,8 @@
 {
   "name": "dora-addons",
   "version": "1.0.0",
-  "description": "Offical addons repository for Dora app",
+  "displayName": "官方",
+  "description": "Dora 官方示例扩展仓库",
   "main": "index.js",
   "repository": "https://github.com:linroid/dora-addons.git",
   "author": "linroid <linroid@gmail.com>",

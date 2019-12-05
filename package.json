@@ -4,7 +4,7 @@
   "displayName": "官方",
   "description": "Dora 官方示例扩展仓库",
   "main": "index.js",
-  "repository": "https://github.com:linroid/dora-addons.git",
+  "repository": "https://github.com:DoraKit/addons.git",
   "author": "linroid <linroid@gmail.com>",
   "license": "",
   "scripts": {

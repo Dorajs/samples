@@ -19,7 +19,7 @@ module.exports = {
   },
   beforeCreate() {
     console.log($storage.all())
-    this.menus = [{
+    this.actions = [{
       title: 'Set color',
       onClick: async (menu) => {
         console.log(menu)

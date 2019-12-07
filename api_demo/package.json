@@ -3,7 +3,7 @@
   "name": "@dora-addon/api-demo",
   "displayName": "API Demo",
   "version": "1.2.1",
-  "description": "在这里可以快速体验 Dora 提供的各种 API",
+  "description": "在这里可以快速体验 Dora.js  提供的各种 API",
   "license": "MIT",
   "author": {
     "name": "linroid"

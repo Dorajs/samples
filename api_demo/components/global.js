@@ -31,13 +31,13 @@ module.exports = {
     }, {
       title: '$ui.prompt(title: string, hint: string, value: string)',
       onClick: async () => {
-        let name = await $ui.prompt('Dora Prompt', 'Input your name', '')
+        let name = await $ui.prompt('Dora.js Prompt', 'Input your name', '')
         $ui.toast(`Hello ${name}`)
       }
     }, {
       title: '$ui.select(title: string, options: [])',
       onClick: async () => {
-        let option = await $ui.select('Dora select', [{
+        let option = await $ui.select('Dora.js select', [{
           id: 'option2',
           title: 'Option 1'
         }, {

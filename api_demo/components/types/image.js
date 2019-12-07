@@ -3,8 +3,8 @@ module.exports = {
   fetch() {
     return {
       url: 'https://raw.githubusercontent.com/DoraKit/vscode-extension/master/docs/explorer.png',
-      summary: 'Dora 的 VSCode 开发插件',
-      title: 'Dora vscode extension',
+      summary: 'Dora.js 的 VSCode 开发插件',
+      title: 'Dora.js vscode extension',
       link: 'https://github.com/DoraKit/vscode-extension',
       author: {
         name: 'linroid',

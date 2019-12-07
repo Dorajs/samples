@@ -11,7 +11,7 @@ module.exports = {
     }
   },
   created() {
-    this.menus = [{
+    this.actions = [{
       title: "Send Event",
       onClick: () => {
         console.log(this)

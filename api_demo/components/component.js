@@ -1,6 +1,6 @@
 module.exports = {
   type: 'list',
-  menus: [{
+  actions: [{
     id: 'update_menu',
     title: 'Menu',
     onClick: async () => {

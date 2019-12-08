@@ -1,61 +1,196 @@
 module.exports = {
   fetch() {
-    return [{
-      title: '$assets',
-      route: $route('@image', {
-        summary: "$assets('nokia.jpeg')",
-        url: $assets('nokia.jpeg'),
-        author: {
-          avatar: 'https://images.unsplash.com/profile-1559352348408-f8710c0ac313?dpr=1&auto=format&fit=crop&w=32&h=32&q=60&crop=faces&bg=fff',
-          name: 'Steve Halama',
-          url: 'https://unsplash.com/@steve3p_0'
+    return [
+      // global
+      {
+        title: 'global',
+        style: 'category'
+      },
+      {
+        title: '$assets()',
+        summary: '$assets(path: string)',
+        onClick: () => {
+          $ui.toast($assets('nokia.jpeg'))
         }
-      })
-    }, {
-      title: '$ui.toast(title: string)',
-      onClick: () => {
-        $ui.toast('Hello World!')
+      },
+      {
+        title: '$icon()',
+        summary: '$icon(name: string, color: string|null)',
+        onClick: () => {
+          $ui.toast($icon('ic_settings', 'black'))
+        }
+      },
+      {
+        title: '$route()',
+        summary: '$route(path: string, data: object)',
+        onClick: () => {
+          $ui.toast(JSON.stringify($route('index', { id: 1 })))
+        }
+      },
+
+      // $ui
+      {
+        title: '$ui',
+        style: 'category'
+      },
+      {
+        title: 'toast()',
+        summary: '$ui.toast(title: string)',
+        onClick: () => {
+          $ui.toast('Hello World!')
+        }
+      },
+      {
+        title: 'alert()',
+        summary: '$ui.alert(message: string)',
+        onClick: async () => {
+          await $ui.alert('Hello World')
+          console.log('alert finished')
+        }
+      },
+
+      // $input
+      {
+        title: '$input',
+        style: 'category'
+      },
+      {
+        title: 'confirm()',
+        summary: '$input.confirm(data: object)',
+        onClick: async () => {
+          let ok = await $input.confirm({
+            title: 'Confirmation',
+            message: 'Are you sure?',
+            okBtn: 'okBtn'
+          })
+          $ui.toast(`ok=${ok}`)
+        }
+      }, {
+        title: 'prompt()',
+        summary: '$input.prompt(data: object)',
+        onClick: async () => {
+          let name = await $input.prompt({
+            title: 'Dora.js Prompt',
+            hint: 'Input your name',
+            value: ''
+          })
+          $ui.toast(`Hello ${name}`)
+        }
+      }, {
+        title: 'select()',
+        summary: '$input.select(data: object)',
+        onClick: async () => {
+          let option = await $input.select({
+            title: 'Dora.js select',
+            options: [{
+              id: 'option2',
+              title: 'Option 1'
+            }, {
+              id: 'option2',
+              title: 'Option 2'
+            }]
+          })
+          $ui.toast(`Selected ${option.title}`)
+        }
+      }, {
+        title: 'select() mutliple',
+        summary: '$input.select(data: object)',
+        onClick: async () => {
+          let option = await $input.select({
+            title: 'Dora.js select',
+            multiple: true,
+            options: [{
+              id: 'option2',
+              title: 'Option 1'
+            }, {
+              id: 'option2',
+              title: 'Option 2'
+            }]
+          })
+          $ui.toast(`Selected ${option.title}`)
+        }
+      },
+      // $router
+      {
+        title: '$router',
+        style: 'category'
+      },
+      {
+        title: 'to()',
+        summary: '$router.to(route: Route)',
+        onClick: () => {
+          $router.to($route('index'))
+        }
+      },
+
+      // $prefs
+      {
+        title: '$prefs',
+        style: 'category'
+      },
+      {
+        title: 'open()',
+        summary: '$prefs.open()',
+        onClick: () => {
+          $prefs.open()
+        }
+      },
+      {
+        title: 'get()',
+        summary: '$prefs.get(key: string): any',
+        onClick: () => {
+          this.dump($prefs.get('name'))
+        }
+      },
+      {
+        title: 'set()',
+        summary: '$prefs.set(key: string, value: any)',
+        onClick: () => {
+          $prefs.set('name', 'Dora.js')
+          this.dump($prefs.get('name'))
+        }
+      },
+      {
+        title: 'all()',
+        summary: '$prefs.all(): object',
+        onClick: () => {
+          this.dump($prefs.all())
+        }
+      },
+
+      // $storage
+      {
+        title: '$storage',
+        style: 'category'
+      },
+      {
+        title: 'get()',
+        summary: '$storage.get(key: string): any',
+        onClick: () => {
+          this.dump($storage.get('author'))
+        }
+      },
+      {
+        title: 'put()',
+        summary: '$storage.put(key: string, value: any)',
+        onClick: () => {
+          $storage.put('author', {
+            name: 'linroid',
+            github: 'https://github.com/linroid'
+          })
+          this.dump($storage.get('author'))
+        }
+      },
+      {
+        title: 'all()',
+        summary: '$storage.all(): object',
+        onClick: () => {
+          this.dump($storage.all())
+        }
       }
-    }, {
-      title: '$ui.alert( message: string)',
-      onClick: async () => {
-        await $ui.alert('Hello World')
-        console.log('alert finished')
-      }
-    }, {
-      title: '$ui.confirm(title: string, message: string)',
-      onClick: async () => {
-        let ok = await $ui.confirm('Confirmation', 'Are you sure?')
-        $ui.toast(`ok=${ok}`)
-      }
-    }, {
-      title: '$ui.prompt(title: string, hint: string, value: string)',
-      onClick: async () => {
-        let name = await $ui.prompt('Dora.js Prompt', 'Input your name', '')
-        $ui.toast(`Hello ${name}`)
-      }
-    }, {
-      title: '$ui.select(title: string, options: [])',
-      onClick: async () => {
-        let option = await $ui.select('Dora.js select', [{
-          id: 'option2',
-          title: 'Option 1'
-        }, {
-          id: 'option2',
-          title: 'Option 2'
-        }])
-        $ui.toast(`Selected ${option.title}`)
-      }
-    }, {
-      title: '$ui.navTo()',
-      onClick: () => {
-        $ui.navTo($route('index'))
-      }
-    }, {
-      title: '$ui.openPrefs()',
-      onClick: () => {
-        $ui.openPrefs()
-      }
-    }]
+    ]
+  },
+  dump(data) {
+    $ui.toast(JSON.stringify(data, null, '  '))
   }
 }

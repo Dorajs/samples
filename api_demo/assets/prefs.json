@@ -9,7 +9,7 @@
     "default": 0,
     "title": "年龄"
   },
-  "show_recommend": {
+  "showRecommend": {
     "type": "boolean",
     "default": true,
     "title": "是否显示推荐"

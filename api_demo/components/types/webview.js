@@ -1,5 +1,5 @@
 module.exports = {
-  type: 'browser',
+  type: 'webview',
   uiOptions: {
     toolBar: true,
     statusBar: true

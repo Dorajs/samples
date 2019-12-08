@@ -26,8 +26,8 @@ module.exports = {
       title: 'image',
       route: $route('types/image')
     }, {
-      title: 'browser',
-      route: $route('types/browser')
+      title: 'webview',
+      route: $route('types/webview')
     }]
   }
 }

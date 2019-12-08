@@ -70,7 +70,7 @@ module.exports = {
         summary: '$input.prompt(data: object)',
         onClick: async () => {
           let name = await $input.prompt({
-            title: 'Dora.js Prompt',
+            title: 'Dora.js prompt',
             hint: 'Input your name',
             value: ''
           })

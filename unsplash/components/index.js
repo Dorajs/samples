@@ -2,11 +2,12 @@ module.exports = {
   type: 'list',
   translucent: true,
   async fetch({ page }) {
+    page = page || 1
     let quality = $prefs.get('quality')
-    let photos = await unsplash.photos.listPhotos(page || 1, 15, "latest")
+    let photos = await unsplash.photos.listPhotos(page, 15, "latest")
       .then(res => res.json())
     return {
-      nextPage: (page || 1) + 1,
+      nextPage: page + 1,
       items: photos.map((item) => {
         let image_url = item.urls.regular;
         if (quality == 'full') {

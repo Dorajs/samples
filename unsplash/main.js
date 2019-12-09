@@ -1,4 +1,9 @@
-const accessKey = 'c786250f011a292adf6438c632e8966b181d3b5cc41714c53fdcaf6b5f9c31dd';
-$http.defaults.headers.common['Authorization'] = `Client-ID ${accessKey}`;
-// console.log($prefs.get('quality'))
-// console.log($prefs.all())
+// require syntax
+const Unsplash = require('unsplash-js').default;
+const fetch = require('node-fetch');
+const ASSESS_TOKEN = '7a96a77d719e9967f935da53784d6a3eb58a4fb174dda25e89ec69059e46c815'
+module.exports = {
+  fetch: fetch,
+  unsplash: new Unsplash({ accessKey: ASSESS_TOKEN })
+}
+$http.defaults.headers.common['Authorization'] = `Client-ID ${ASSESS_TOKEN}`;

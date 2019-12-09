@@ -1,15 +1,13 @@
 module.exports = {
   type: 'list',
   translucent: true,
-  async fetch(page) {
-    console.log($http)
-    let photos = await $http.get('https://api.unsplash.com/photos', {
-      page: page
-    })
+  async fetch({ page }) {
     let quality = $prefs.get('quality')
+    let photos = await unsplash.photos.listPhotos(page || 1, 15, "latest")
+      .then(res => res.json())
     return {
-      nextPage: page + 1,
-      items: photos.data.map((item) => {
+      nextPage: (page || 1) + 1,
+      items: photos.map((item) => {
         let image_url = item.urls.regular;
         if (quality == 'full') {
           image_url = item.urls.full
@@ -25,7 +23,6 @@ module.exports = {
           }),
           style: 'gallery',
           summary: item.description || item.alt_description,
-          link: item.links.html,
           author: {
             name: item.user.name,
             avatar: item.user.profile_image.medium,

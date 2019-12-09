@@ -1,6 +1,6 @@
 {
   "uuid": "8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4",
-  "name": "@dora-addon/unsplash",
+  "name": "@dora.js/unsplash",
   "displayName": "Unsplash",
   "version": "1.1.0",
   "author": {
@@ -11,11 +11,14 @@
   "engines": {
     "dora": ">=1.0.0"
   },
-  "keywords": ["Dora", "dora-addon"],
+  "keywords": [
+    "Dora.js"
+  ],
   "icon": "assets/icon.png",
   "prefs": "assets/prefs.json",
   "main": "main.js",
   "dependencies": {
-    "unsplash-js": "^5.0.0"
+    "node-fetch": "^2.6.0",
+    "unsplash-js": "^6.0.0"
   }
 }

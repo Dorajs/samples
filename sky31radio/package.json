@@ -1,6 +1,6 @@
 {
   "uuid": "5d3a6c5c-cd1b-4fae-96ae-e858dbf3225d",
-  "name": "@dora-addon/sky31radio",
+  "name": "@dora.js/sky31radio",
   "displayName": "四季电台",
   "version": "1.1.0",
   "description": "湘潭大学四季电台",
@@ -11,7 +11,7 @@
   "engines": {
     "dora": ">=1.0.0"
   },
-  "keywords": ["Dora", "dora-addon"],
+  "keywords": ["Dora.js"],
   "icon": "assets/icon.png",
   "prefs": "assets/prefs.json",
   "main": "main.js",

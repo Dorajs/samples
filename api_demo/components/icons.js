@@ -24,7 +24,11 @@ module.exports = {
       onClick: async (menu) => {
         console.log(menu)
         console.log(this)
-        let color = await $ui.prompt('Set color', 'color', this.color())
+        let color = await $input.prompt({
+          title: 'Set color',
+          hint: 'color',
+          value: this.color()
+        })
         $storage.put('icon_color', color)
         this.refresh()
       },

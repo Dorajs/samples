@@ -18,7 +18,7 @@ module.exports = {
         onClick: () => {
           console.log($ui)
           if (stat.isDirectory()) {
-            $ui.navTo($route('file', {
+            $router.to($route('file', {
               path: file
             }))
           } else {

@@ -20,7 +20,9 @@ module.exports = {
     }, {
       title: "Redirect",
       onClick: async () => {
-        let newUrl = await $ui.prompt("Url")
+        let newUrl = await $ui.prompt({
+          title: "Url"
+        })
         this.redirect(newUrl)
       }
     }, {

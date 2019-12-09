@@ -1,8 +1,8 @@
 {
   "uuid": "2f33d8de-c474-4f38-a19b-cf2cab4228cc",
-  "name": "@dora-addon/api-demo",
+  "name": "@dora.js/api-demo",
   "displayName": "API Demo",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "在这里可以快速体验 Dora.js  提供的各种 API",
   "license": "MIT",
   "author": {
@@ -12,8 +12,7 @@
     "dora": ">=1.0.0"
   },
   "keywords": [
-    "Dora",
-    "dora-addon"
+    "Dora.js"
   ],
   "icon": "assets/icon.png",
   "main": "main.js",

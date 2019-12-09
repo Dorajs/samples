@@ -9,6 +9,7 @@ module.exports = {
     }
   },
   startDanmaku() {
+    console.log('startDanmaku')
     var seq = 0
     this.danmuScheduler = setInterval(() => {
       seq++;
@@ -19,7 +20,8 @@ module.exports = {
     }, 100)
   },
   stopDanmaku() {
-    clearInterval(this.clearInterval)
+    console.log('stopDanmaku')
+    clearInterval(this.danmuScheduler)
   },
   sendDanmaku(message) {
     $ui.toast(`send ${message}`)

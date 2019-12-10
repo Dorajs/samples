@@ -1,39 +1,41 @@
 module.exports = {
-  type: 'list',
+  type: "list",
   translucent: true,
+  actions: [{
+    title: '官网',
+    route: $route('https://unsplash.com/')
+  }],
+
   async fetch({ page }) {
     page = page || 1
     let quality = $prefs.get('quality')
-    let photos = await unsplash.photos.listPhotos(page, 15, "latest")
+    let photos = await unsplash.photos
+      .listPhotos(page, 15, "latest")
       .then(res => res.json())
     return {
       nextPage: page + 1,
-      items: photos.map((item) => {
-        let image_url = item.urls.regular;
-        if (quality == 'full') {
-          image_url = item.urls.full
-        } else if (quality == 'raw') {
-          image_url = item.urls.raw
-        }
-        return {
-          title: item.description,
-          route: $route('@image', {
-            url: image_url,
-            color: item.color,
-            aspect: (item.width * 1.0 / item.height).toFixed(3),
-          }),
-          style: 'gallery',
-          summary: item.description || item.alt_description,
-          author: {
-            name: item.user.name,
-            avatar: item.user.profile_image.medium,
-            route: $route(item.user.links.html)
-          },
-          thumb: item.urls.small,
-          color: item.color,
-          aspect: (item.width * 1.0 / item.height).toFixed(3)
-        }
+      items: photos.map(photo => {
+        return this.convert(photo, quality)
       })
+    }
+  },
+
+  convert(photo, quality) {
+    return {
+      title: photo.title,
+      route: $route('@image', {
+        url: photo.urls[quality]
+      }),
+      style: 'gallery',
+      summary: photo.description || photo.alt_description,
+      author: {
+        name: photo.user.name,
+        avatar: photo.user.profile_image.small,
+        route: $route(photo.user.links.html)
+      },
+      thumb: photo.urls.small,
+      color: photo.color,
+      aspect: photo.width / photo.height
     }
   }
 }

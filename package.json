@@ -8,7 +8,7 @@
   "author": "linroid <linroid@gmail.com>",
   "license": "",
   "scripts": {
-    "build": "dora repo"
+    "build": "dora repo --url https://dorajs.gitee.io/samples/"
   },
   "dependencies": {
     "@dora-app/cli": "^1.1.2",

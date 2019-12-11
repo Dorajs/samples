@@ -1,5 +1,6 @@
 module.exports = {
-  type: 'bottomTab',
+  type: 'topTab',
+  tabMode: 'fixed',
   fetch() {
     return [{
         title: '热门话题',
@@ -17,13 +18,7 @@ module.exports = {
       {
         title: '区块链',
         route: $route('news', { column: 'blockchain' })
-      },
-      {
-        title: '招聘行情',
-        route: $route('hire', {}),
-        thumb: $icon('plus_one')
       }
-
     ]
   },
   onClick(item) {

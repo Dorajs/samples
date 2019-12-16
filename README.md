@@ -1,5 +1,3 @@
 # Dora.js 扩展示例
 
-Official addon repository for [Dora.js](https://dorajs.com)
-
-Repo url: `https://repo.dorajs.com/index.json`
+点击添加：[海外](https://share.dorajs.com/?type=repo&url=https://repo.dorajs.com/index.json&name=Official) | [国内](https://share.dorajs.com/?type=repo&url=https://dorajs.gitee.io/samples/index.json&name=官方)

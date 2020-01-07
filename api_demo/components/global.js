@@ -80,7 +80,7 @@ module.exports = {
         title: 'select()',
         summary: '$input.select(data: object)',
         onClick: async () => {
-          let option = await $input.select({
+          let selected = await $input.select({
             title: 'Dora.js select',
             options: [{
               id: 'option2',
@@ -90,13 +90,13 @@ module.exports = {
               title: 'Option 2'
             }]
           })
-          $ui.toast(`Selected ${option.title}`)
+          $ui.toast(`Selected ${JSON.stringify(selected)}`)
         }
       }, {
         title: 'select() mutliple',
         summary: '$input.select(data: object)',
         onClick: async () => {
-          let option = await $input.select({
+          let selected = await $input.select({
             title: 'Dora.js select',
             multiple: true,
             options: [{
@@ -107,7 +107,7 @@ module.exports = {
               title: 'Option 2'
             }]
           })
-          $ui.toast(`Selected ${option.title}`)
+          $ui.toast(`Selected ${JSON.stringify(selected)}`)
         }
       },
       // $router

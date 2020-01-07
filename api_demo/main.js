@@ -1,1 +1,1 @@
-console.log('Welcome to Dora app!')
+console.log('Welcome to Dora.js!')

@@ -1,18 +1,5 @@
 module.exports = {
   type: 'list',
-  actions: [{
-    id: 'update_menu',
-    title: 'Update title',
-    onClick: async () => {
-      let newTitle = await $input.prompt({
-        title: 'Update title',
-        hint: 'new title',
-        value: this.title
-      })
-      this.title = newTitle
-    },
-    asAction: false
-  }],
   async fetch() {
     return [{
       title: 'list',

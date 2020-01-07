@@ -1,0 +1,66 @@
+{
+    "displayName": "官方",
+    "description": "Dora 官方示例扩展仓库",
+    "author": {
+        "name": "linroid",
+        "email": "linroid@gmail.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DoraKit/addons.git"
+    },
+    "version": "1.0.0",
+    "license": "",
+    "addons": [
+        {
+            "displayName": "API Demo",
+            "uuid": "2f33d8de-c474-4f38-a19b-cf2cab4228cc",
+            "description": "在这里可以快速体验 Dora.js  提供的各种 API",
+            "version": "1.3.3",
+            "author": {
+                "name": "linroid"
+            },
+            "size": 122308,
+            "url": "https://dorajs.gitee.io/samples/2f33d8de-c474-4f38-a19b-cf2cab4228cc/1.3.3/API-Demo.dora",
+            "icon": "https://dorajs.gitee.io/samples/2f33d8de-c474-4f38-a19b-cf2cab4228cc/1.3.3/icon.png"
+        },
+        {
+            "displayName": "Bing Wallpaper",
+            "uuid": "c5258f19-e0a1-4678-9880-04d87a69e0c8",
+            "description": "Bing 每日壁纸",
+            "version": "1.1.1",
+            "author": {
+                "name": "linroid",
+                "email": "linroid@gmail.com",
+                "url": "https://linroid.com"
+            },
+            "size": 7206,
+            "url": "https://dorajs.gitee.io/samples/c5258f19-e0a1-4678-9880-04d87a69e0c8/1.1.1/Bing-Wallpaper.dora",
+            "icon": "https://dorajs.gitee.io/samples/c5258f19-e0a1-4678-9880-04d87a69e0c8/1.1.1/bing.png"
+        },
+        {
+            "displayName": "Readhub",
+            "uuid": "36c0507b-d500-475b-98e9-827eae523448",
+            "description": "每天三分钟的科技新闻聚合阅读",
+            "version": "1.2.0",
+            "author": {
+                "name": "linroid"
+            },
+            "size": 6207,
+            "url": "https://dorajs.gitee.io/samples/36c0507b-d500-475b-98e9-827eae523448/1.2.0/Readhub.dora",
+            "icon": "https://dorajs.gitee.io/samples/36c0507b-d500-475b-98e9-827eae523448/1.2.0/icon.png"
+        },
+        {
+            "displayName": "Unsplash",
+            "uuid": "8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4",
+            "description": "高清晰度免费图片素材，适用个人和商业",
+            "version": "1.2.0",
+            "author": {
+                "name": "linroid"
+            },
+            "size": 2364,
+            "url": "https://dorajs.gitee.io/samples/8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4/1.2.0/Unsplash.dora",
+            "icon": "https://dorajs.gitee.io/samples/8ce7453e-dc59-11e9-9d36-2a2ae2dbcce4/1.2.0/icon.png"
+        }
+    ]
+}

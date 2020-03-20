@@ -203,7 +203,7 @@ module.exports = {
       },
       {
         title: 'install()',
-        summary: '$dora.install(): Promise<Addon?>',
+        summary: '$dora.install(): Promise<Addon | null>',
         onClick: async () => {
           const result = await $dora.install("npm://@dora.js/unsplash")
           $ui.toast(`install result: ${result}`)

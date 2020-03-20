@@ -187,6 +187,59 @@ module.exports = {
         onClick: () => {
           this.dump($storage.all())
         }
+      },
+      // $dora
+      {
+        title: '$dora',
+        style: 'category'
+      },
+      {
+        title: 'addons()',
+        summary: '$dora.addons(): Promise<Addon[]>',
+        onClick: async () => {
+          const addons = await $dora.addons()
+          $ui.showCode(JSON.stringify(addons, null, '  '))
+        }
+      },
+      {
+        title: 'install()',
+        summary: '$dora.install(): Promise<Addon?>',
+        onClick: async () => {
+          const result = await $dora.install("npm://@dora.js/unsplash")
+          $ui.toast(`install result: ${result}`)
+        }
+      },
+      {
+        title: 'uninstall()',
+        summary: '$dora.uninstall(uuid: string): Promise<Boolean>',
+        onClick: async () => {
+          const result = await $dora.uninstall("2f33d8de-c474-4f38-a19b-cf2cab4228cc")
+          $ui.toast(`uninstall result: ${result}`)
+        }
+      },
+      {
+        title: 'isInstalled()',
+        summary: '$dora.isInstalled(uuid: string): Boolean',
+        onClick: () => {
+          const result = $dora.isInstalled("2f33d8de-c474-4f38-a19b-cf2cab4228cc")
+          $ui.toast(`is installed: ${result}`)
+        }
+      },
+      {
+        title: 'subscribe()',
+        summary: '$dora.subscribe(userId: string): Promise<Boolean>',
+        onClick: async () => {
+          const result = await $dora.subscribe("linroid")
+          $ui.toast(`subscribe result: ${result}`)
+        }
+      },
+      {
+        title: 'isSubscribed()',
+        summary: '$dora.isSubscribed(userId: string): Boolean',
+        onClick: () => {
+          const result = $dora.isSubscribed("linroid")
+          $ui.toast(`is subscribed: ${result}`)
+        }
       }
     ]
   },

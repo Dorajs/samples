@@ -1,1 +1,1 @@
-console.log('Welcome to Dora.js!')
+console.log(process.versions)

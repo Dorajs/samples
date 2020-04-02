@@ -2,20 +2,21 @@
   "uuid": "2f33d8de-c474-4f38-a19b-cf2cab4228cc",
   "name": "@dora.js/api-demo",
   "displayName": "API Demo",
-  "version": "1.3.0",
+  "version": "1.3.2",
   "description": "在这里可以快速体验 Dora.js 提供的各种能力",
   "license": "MIT",
+  "homepage": "https://github.com/Dorajs/samples/tree/master/api_demo",
   "author": {
-    "name": "linroid"
+    "name": "linroid",
+    "fullname": "Lin Zhang",
+    "email": "linroid@gmail.com"
   },
   "engines": {
-    "Dora.js": ">=1.3.0"
+    "dora": ">=1.4.0"
   },
   "keywords": [
     "Dora.js"
   ],
   "icon": "assets/icon.png",
-  "main": "main.js",
-  "dependencies": {
-  }
+  "main": "main.js"
 }

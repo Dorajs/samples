@@ -213,7 +213,15 @@ module.exports = {
         title: 'uninstall()',
         summary: '$dora.uninstall(uuid: string): Promise<Boolean>',
         onClick: async () => {
-          const result = await $dora.uninstall("2f33d8de-c474-4f38-a19b-cf2cab4228cc")
+          const addons = await $dora.addons()
+          const item = await $input.select({
+            title: '卸载哪一个？',
+            options: addons.map(addon => ({
+              title: addon.displayName,
+              uuid: addon.uuid
+            }))
+          })
+          const result = await $dora.uninstall(item.uuid)
           $ui.toast(`uninstall result: ${result}`)
         }
       },

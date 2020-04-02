@@ -1,5 +1,4 @@
 const fs = require('fs')
-const axios = require('axios')
 module.exports = {
   type: 'list',
   fetch() {

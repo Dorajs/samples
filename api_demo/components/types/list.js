@@ -5,7 +5,7 @@ module.exports = {
     {
       id: 'update_menu',
       title: 'Update title',
-      onClick: async function() {
+      onClick: async function () {
         let newTitle = await $input.prompt({
           title: 'Update title',
           hint: 'new title',
@@ -17,6 +17,50 @@ module.exports = {
   ],
   async fetch() {
     return [
+      // label
+      {
+        title: '样式: label',
+        style: 'category'
+      },
+      {
+        title: 'Label 1',
+        style: 'label'
+      },
+      {
+        title: 'Label 2',
+        style: 'label'
+      },
+      {
+        title: 'Label 3',
+        style: 'label'
+      },
+      {
+        title: 'Label 4',
+        style: 'label'
+      },
+      // chips
+      {
+        title: '样式: chips',
+        style: 'category'
+      },
+      {
+        title: 'Chips title',
+        style: 'chips',
+        actions: [
+          {
+            title: 'Action 1'
+          },
+          {
+            title: 'Action 2'
+          },
+          {
+            title: 'Action 3'
+          },
+          {
+            title: 'Action 4'
+          },
+        ]
+      },
       // simple
       {
         title: '样式：simple',
@@ -40,7 +84,7 @@ module.exports = {
       {
         title: 'Hello World!',
         style: 'simple',
-        thumb: $icon('face', 'black'),
+        image: $icon('face', 'black'),
         summary: '一个简单的样式'
       },
       // icon
@@ -49,7 +93,7 @@ module.exports = {
         style: 'category',
         action: {
           title: '查看代码',
-          onClick: function() {
+          onClick: function () {
             $ui.toast('TODO: not implemented')
           }
         }
@@ -57,17 +101,17 @@ module.exports = {
       {
         title: 'icon',
         style: 'icon',
-        thumb: $icon('face', 'red')
+        image: $icon('face', 'red')
       },
       {
         title: 'icon',
         style: 'icon',
-        thumb: $icon('code')
+        image: $icon('code')
       },
       {
         title: 'icon',
         style: 'icon',
-        thumb: $icon('build', 'green')
+        image: $icon('build', 'green')
       },
       // vod
       {
@@ -112,7 +156,7 @@ module.exports = {
       {
         title: 'Coding...',
         style: 'live',
-        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         label: '英雄联盟',
         viewerCount: '1.1k',
         author: {
@@ -123,7 +167,7 @@ module.exports = {
       {
         title: 'Coding...',
         style: 'live',
-        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         label: '英雄联盟',
         author: {
           name: 'linroid',
@@ -133,7 +177,7 @@ module.exports = {
       {
         title: 'Coding...',
         style: 'live',
-        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         spanCount: 12,
         label: '英雄联盟',
         author: {
@@ -155,7 +199,7 @@ module.exports = {
       {
         title: 'Title goes here',
         style: 'richMedia',
-        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         rating: {
           score: 4.5,
           total: 5,
@@ -203,7 +247,7 @@ module.exports = {
       {
         title: 'gallery',
         style: 'gallery',
-        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         author: {
           name: 'linroid',
           avatar: 'https://avatars0.githubusercontent.com/u/3192142?s=460&v=4'
@@ -221,12 +265,12 @@ module.exports = {
         }
       },
       {
-        thumb: 'https://img1.doubanio.com/view/subject/l/public/s2768378.jpg',
+        image: 'https://img1.doubanio.com/view/subject/l/public/s2768378.jpg',
         title: '三体',
         style: 'book'
       },
       {
-        thumb: 'https://img3.doubanio.com/view/subject/l/public/s8958650.jpg',
+        image: 'https://img3.doubanio.com/view/subject/l/public/s8958650.jpg',
         title: 'JavaScript高级程序设计',
         style: 'book'
       },
@@ -248,7 +292,7 @@ module.exports = {
         author: {
           name: 'xx媒体'
         },
-        thumb: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
+        image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         summary:
           '12 月 4 日，腾讯集团和任天堂在上海举行发布会，宣布腾讯引进的任天堂新世代游戏机 Nintendo Switch 将于 12 月 10 日正式发售 ... 有「马力欧之父」称号的任天堂株式会社代表取缔役、专门领域开发主导宫本茂通过视频形式表示：任天堂长久以来，一直希望可以为中国顾客提供任天堂的游戏娱乐，现在这个梦想得以实现，真的感到十分高兴，也十分感谢 ... 腾讯游戏任天堂合作部总经理钱赓介绍，关于未来 Nintendo Switch 的网络服务方面，腾讯在国内架设了适合中国网络环境的网络系统，将通过云服务，设立了本地化的网络服务'
       }

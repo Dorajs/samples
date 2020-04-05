@@ -6,22 +6,22 @@ module.exports = {
       {
         title: '组件',
         route: $route('component'),
-        thumb: $assets('component.svg')
+        image: $assets('component.svg')
       },
       {
         title: '全局函数',
         route: $route('global'),
-        thumb: $assets('global.svg')
+        image: $assets('global.svg')
       },
       {
         title: 'icons',
         route: $route('icons'),
-        thumb: $icon('mood')
+        image: $icon('mood')
       },
       {
         title: '更多',
         route: $route('more'),
-        thumb: $icon('more_vert')
+        image: $icon('more_vert')
       }
     ]
   }

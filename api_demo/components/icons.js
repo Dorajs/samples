@@ -9,7 +9,7 @@ module.exports = {
         id: name,
         title: name,
         style: 'icon',
-        thumb: $icon(name, this.color()),
+        image: $icon(name, this.color()),
         onClick: (item) => {
           $clipboard.text = `$icon('${item.id}', '${this.color()}')`
           $ui.toast('已复制到剪切板')

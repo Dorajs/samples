@@ -1,61 +1,47 @@
 module.exports = {
   fetch() {
     return [
-      // global
-      {
-        title: 'global',
-        style: 'category'
-      },
-      {
-        title: '$assets()',
-        summary: '$assets(path: string)',
-        onClick: () => {
-          $ui.toast($assets('nokia.jpeg'))
-        }
-      },
-      {
-        title: '$icon()',
-        summary: '$icon(name: string, color: string|null)',
-        onClick: () => {
-          $ui.toast($icon('ic_settings', 'black'))
-        }
-      },
-      {
-        title: '$route()',
-        summary: '$route(path: string, data: object)',
-        onClick: () => {
-          $ui.toast(JSON.stringify($route('index', { id: 1 })))
-        }
-      },
-
       // $ui
       {
         title: '$ui',
         style: 'category'
       },
       {
-        title: 'toast()',
+        title: '显示一个 Toast 消息',
         summary: '$ui.toast(title: string)',
         onClick: () => {
           $ui.toast('Hello World!')
         }
       },
       {
-        title: 'alert()',
+        title: '显示一个弹窗警告',
         summary: '$ui.alert(message: string)',
         onClick: async () => {
           await $ui.alert('Hello World')
           console.log('alert finished')
         }
       },
-
+      {
+        title: '打开浏览器',
+        summary: '$ui.browser(url: string)',
+        onClick: () => {
+          $ui.browser('https://www.npmjs.com/')
+        }
+      },
+      {
+        title: '查看一个 npm 用户',
+        summary: '$ui.viewUser(userId: string)',
+        onClick: () => {
+          $ui.viewUser('linroid')
+        }
+      },
       // $input
       {
         title: '$input',
         style: 'category'
       },
       {
-        title: 'confirm()',
+        title: '显示一个确认弹窗',
         summary: '$input.confirm(data: object)',
         onClick: async () => {
           let ok = await $input.confirm({
@@ -65,8 +51,9 @@ module.exports = {
           })
           $ui.toast(`ok=${ok}`)
         }
-      }, {
-        title: 'prompt()',
+      },
+      {
+        title: '请求输入',
         summary: '$input.prompt(data: object)',
         onClick: async () => {
           let name = await $input.prompt({
@@ -76,36 +63,44 @@ module.exports = {
           })
           $ui.toast(`Hello ${name}`)
         }
-      }, {
-        title: 'select()',
+      },
+      {
+        title: '进行单向选择',
         summary: '$input.select(data: object)',
         onClick: async () => {
           let selected = await $input.select({
             title: 'Dora.js select',
-            options: [{
-              id: 'option2',
-              title: 'Option 1'
-            }, {
-              id: 'option2',
-              title: 'Option 2'
-            }]
+            options: [
+              {
+                id: 'option2',
+                title: 'Option 1'
+              },
+              {
+                id: 'option2',
+                title: 'Option 2'
+              }
+            ]
           })
           $ui.toast(`Selected ${JSON.stringify(selected)}`)
         }
-      }, {
-        title: 'select() mutliple',
+      },
+      {
+        title: '进行多项选择',
         summary: '$input.select(data: object)',
         onClick: async () => {
           let selected = await $input.select({
             title: 'Dora.js select',
             multiple: true,
-            options: [{
-              id: 'option2',
-              title: 'Option 1'
-            }, {
-              id: 'option2',
-              title: 'Option 2'
-            }]
+            options: [
+              {
+                id: 'option2',
+                title: 'Option 1'
+              },
+              {
+                id: 'option2',
+                title: 'Option 2'
+              }
+            ]
           })
           $ui.toast(`Selected ${JSON.stringify(selected)}`)
         }
@@ -116,7 +111,7 @@ module.exports = {
         style: 'category'
       },
       {
-        title: 'to()',
+        title: '跳转指定路由',
         summary: '$router.to(route: Route)',
         onClick: () => {
           $router.to($route('index'))
@@ -129,21 +124,21 @@ module.exports = {
         style: 'category'
       },
       {
-        title: 'open()',
+        title: '打开配置页',
         summary: '$prefs.open()',
         onClick: () => {
           $prefs.open()
         }
       },
       {
-        title: 'get()',
+        title: '获取一个配置值',
         summary: '$prefs.get(key: string): any',
         onClick: () => {
           this.dump($prefs.get('name'))
         }
       },
       {
-        title: 'set()',
+        title: '设置一个配置',
         summary: '$prefs.set(key: string, value: any)',
         onClick: () => {
           $prefs.set('name', 'Dora.js')
@@ -151,7 +146,7 @@ module.exports = {
         }
       },
       {
-        title: 'all()',
+        title: '获取所有配置',
         summary: '$prefs.all(): object',
         onClick: () => {
           this.dump($prefs.all())
@@ -164,14 +159,14 @@ module.exports = {
         style: 'category'
       },
       {
-        title: 'get()',
+        title: '获取一个值',
         summary: '$storage.get(key: string): any',
         onClick: () => {
           this.dump($storage.get('author'))
         }
       },
       {
-        title: 'put()',
+        title: '设置一个值',
         summary: '$storage.put(key: string, value: any)',
         onClick: () => {
           $storage.put('author', {
@@ -182,7 +177,7 @@ module.exports = {
         }
       },
       {
-        title: 'all()',
+        title: '获取所有存储值',
         summary: '$storage.all(): object',
         onClick: () => {
           this.dump($storage.all())
@@ -194,7 +189,7 @@ module.exports = {
         style: 'category'
       },
       {
-        title: 'addons()',
+        title: '获取已安装的扩展列表',
         summary: '$dora.addons(): Promise<Addon[]>',
         onClick: async () => {
           const addons = await $dora.addons()
@@ -202,15 +197,15 @@ module.exports = {
         }
       },
       {
-        title: 'install()',
-        summary: '$dora.install(): Promise<Addon | null>',
+        title: '安装一个扩展',
+        summary: '$dora.install(url: Url): Promise<Addon | null>',
         onClick: async () => {
-          const result = await $dora.install("npm://@dora.js/unsplash")
+          const result = await $dora.install('npm://@dora.js/unsplash')
           $ui.toast(`install result: ${result}`)
         }
       },
       {
-        title: 'uninstall()',
+        title: '卸载一个扩展',
         summary: '$dora.uninstall(uuid: string): Promise<Boolean>',
         onClick: async () => {
           const addons = await $dora.addons()
@@ -226,27 +221,56 @@ module.exports = {
         }
       },
       {
-        title: 'isInstalled()',
+        title: '判断是否安装指定扩展',
         summary: '$dora.isInstalled(uuid: string): Boolean',
         onClick: () => {
-          const result = $dora.isInstalled("2f33d8de-c474-4f38-a19b-cf2cab4228cc")
+          const result = $dora.isInstalled(
+            '2f33d8de-c474-4f38-a19b-cf2cab4228cc'
+          )
           $ui.toast(`is installed: ${result}`)
         }
       },
       {
-        title: 'subscribe()',
+        title: '订阅一个用户',
         summary: '$dora.subscribe(userId: string): Promise<Boolean>',
         onClick: async () => {
-          const result = await $dora.subscribe("linroid")
+          const result = await $dora.subscribe('linroid')
           $ui.toast(`subscribe result: ${result}`)
         }
       },
       {
-        title: 'isSubscribed()',
+        title: '检查是否订阅了这个用户',
         summary: '$dora.isSubscribed(userId: string): Boolean',
         onClick: () => {
-          const result = $dora.isSubscribed("linroid")
+          const result = $dora.isSubscribed('linroid')
           $ui.toast(`is subscribed: ${result}`)
+        }
+      },
+
+      // global
+      {
+        title: 'global',
+        style: 'category'
+      },
+      {
+        title: '生成 assets 目录下的文件 Url',
+        summary: '$assets(path: string)',
+        onClick: () => {
+          $ui.toast($assets('nokia.jpeg'))
+        }
+      },
+      {
+        title: '生成一个内置图标 Url',
+        summary: '$icon(name: string, color: string|null)',
+        onClick: () => {
+          $ui.toast($icon('ic_settings', 'black'))
+        }
+      },
+      {
+        title: '生成一个路由',
+        summary: '$route(path: string, data: object)',
+        onClick: () => {
+          $ui.toast(JSON.stringify($route('index', { id: 1 })))
         }
       }
     ]

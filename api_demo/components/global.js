@@ -206,7 +206,7 @@ module.exports = {
       },
       {
         title: '卸载一个扩展',
-        summary: '$dora.uninstall(uuid: string): Promise<Boolean>',
+        summary: '$dora.uninstall(uuid: string): Promise<boolean>',
         onClick: async () => {
           const addons = await $dora.addons()
           const item = await $input.select({
@@ -222,7 +222,7 @@ module.exports = {
       },
       {
         title: '判断是否安装指定扩展',
-        summary: '$dora.isInstalled(uuid: string): Boolean',
+        summary: '$dora.isInstalled(uuid: string): boolean',
         onClick: () => {
           const result = $dora.isInstalled(
             '2f33d8de-c474-4f38-a19b-cf2cab4228cc'
@@ -232,7 +232,7 @@ module.exports = {
       },
       {
         title: '订阅一个用户',
-        summary: '$dora.subscribe(userId: string): Promise<Boolean>',
+        summary: '$dora.subscribe(userId: string): Promise<boolean>',
         onClick: async () => {
           const result = await $dora.subscribe('linroid')
           $ui.toast(`subscribe result: ${result}`)
@@ -240,7 +240,7 @@ module.exports = {
       },
       {
         title: '检查是否订阅了这个用户',
-        summary: '$dora.isSubscribed(userId: string): Boolean',
+        summary: '$dora.isSubscribed(userId: string): boolean',
         onClick: () => {
           const result = $dora.isSubscribed('linroid')
           $ui.toast(`is subscribed: ${result}`)

@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         title: '显示一个确认弹窗',
-        summary: '$input.confirm(data: object)',
+        summary: '$input.confirm(params: ConfirmParams)',
         onClick: async () => {
           let ok = await $input.confirm({
             title: 'Confirmation',
@@ -53,15 +53,39 @@ module.exports = {
         }
       },
       {
-        title: '请求输入',
-        summary: '$input.prompt(data: object)',
+        title: '请求输入文本',
+        summary: '$input.text(params: InputParams)',
         onClick: async () => {
           let name = await $input.prompt({
-            title: 'Dora.js prompt',
-            hint: 'Input your name',
+            title: '输入姓名',
+            hint: '姓名',
             value: ''
           })
           $ui.toast(`Hello ${name}`)
+        }
+      },
+      {
+        title: '请求输入数字',
+        summary: '$input.text(params: InputParams)',
+        onClick: async () => {
+          let age = await $input.number({
+            title: '输入年龄',
+            hint: '年龄',
+            value: ''
+          })
+          $ui.toast(`年龄: ${age}`)
+        }
+      },
+      {
+        title: '请求输入密码',
+        summary: '$input.password(params: InputParams)',
+        onClick: async () => {
+          let age = await $input.password({
+            title: '输入密码',
+            hint: '密码',
+            value: ''
+          })
+          $ui.toast(`密码: ${age}`)
         }
       },
       {
@@ -247,21 +271,22 @@ module.exports = {
         }
       },
 
-      // downloder
-      {
-        title: '$downloader',
-        style: 'category'
-      },
-      {
-        title: '下载文件',
-        summary: '$downloader.add(params: DownloadParams)',
-        onClick: () => {
-          $downloader.add({
-            url: 'http://r.cnpmjs.org/@dora.js/api-demo/download/@dora.js/api-demo-1.4.0.tgz',
-            filename: 'api-demo-1.4.0.dora'
-          })
-        }
-      },
+      // // downloder
+      // {
+      //   title: '$downloader',
+      //   style: 'category'
+      // },
+      // {
+      //   title: '下载文件',
+      //   summary: '$downloader.add(params: DownloadParams)',
+      //   onClick: () => {
+      //     $downloader.add({
+      //       url:
+      //         'http://r.cnpmjs.org/@dora.js/api-demo/download/@dora.js/api-demo-1.4.0.tgz',
+      //       filename: 'api-demo-1.4.0.dora'
+      //     })
+      //   }
+      // },
       // global
       {
         title: 'global',

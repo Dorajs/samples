@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   type: 'bottomTab',
   title: 'API Demo',
   async fetch({ args, page }) {

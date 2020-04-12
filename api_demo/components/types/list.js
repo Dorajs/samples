@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 module.exports = {
   type: 'list',
   style: 'simple',
@@ -58,19 +60,13 @@ module.exports = {
           },
           {
             title: 'Action 4'
-          },
+          }
         ]
       },
       // simple
       {
         title: '样式：simple',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         title: 'Hello World!',
@@ -90,13 +86,7 @@ module.exports = {
       // icon
       {
         title: '样式：icon',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: function () {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         title: 'icon',
@@ -116,13 +106,7 @@ module.exports = {
       // vod
       {
         title: '样式：vod',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         title: '冰雪奇缘2',
@@ -145,13 +129,7 @@ module.exports = {
       // live
       {
         title: '样式：live',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         title: 'Coding...',
@@ -188,13 +166,7 @@ module.exports = {
       // richMedia
       {
         title: '样式：richMedia',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         title: 'Title goes here',
@@ -236,13 +208,7 @@ module.exports = {
       // category
       {
         title: '样式：gallery',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         title: 'gallery',
@@ -256,13 +222,7 @@ module.exports = {
       // category
       {
         title: '样式：book',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         image: 'https://img1.doubanio.com/view/subject/l/public/s2768378.jpg',
@@ -277,13 +237,7 @@ module.exports = {
       // article
       {
         title: '样式: article',
-        style: 'category',
-        action: {
-          title: '查看代码',
-          onClick: () => {
-            $ui.toast('TODO: not implemented')
-          }
-        }
+        style: 'category'
       },
       {
         time: 'just now',
@@ -295,10 +249,45 @@ module.exports = {
         image: 'https://weiliicimg9.pstatp.com/weili/l/778002376200945690.webp',
         summary:
           '12 月 4 日，腾讯集团和任天堂在上海举行发布会，宣布腾讯引进的任天堂新世代游戏机 Nintendo Switch 将于 12 月 10 日正式发售 ... 有「马力欧之父」称号的任天堂株式会社代表取缔役、专门领域开发主导宫本茂通过视频形式表示：任天堂长久以来，一直希望可以为中国顾客提供任天堂的游戏娱乐，现在这个梦想得以实现，真的感到十分高兴，也十分感谢 ... 腾讯游戏任天堂合作部总经理钱赓介绍，关于未来 Nintendo Switch 的网络服务方面，腾讯在国内架设了适合中国网络环境的网络系统，将通过云服务，设立了本地化的网络服务'
+      },
+      // richContent
+      {
+        title: '样式: richContent',
+        style: 'category'
+      },
+      {
+        title: 'README.md',
+        style: 'richContent',
+        content: {
+          url: 'https://docs.dorajs.com/',
+          markdown: this.readReadme()
+        }
+      },
+      {
+        title: '百度一下',
+        style: 'richContent',
+        content: {
+          url: 'https://baidu.com/',
+        }
+      },
+      {
+        url: {
+          value:"",
+          headers: {
+            Cookies: "xxxx"
+          }
+        }
+      },
+      {
+        url: "https://foo.com/resource.png"
       }
+
     ]
   },
   simpleOnClick(data) {
     $ui.toast(`onClick ${JSON.stringify(data)}`)
+  },
+  readReadme() {
+    return fs.readFileSync('./README.md', { encoding: 'utf8' })
   }
 }

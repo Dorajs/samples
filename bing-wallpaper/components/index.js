@@ -5,18 +5,20 @@ const wbw = new WonderfulBingWallpaper({
 })
 module.exports = {
   type: 'list',
-  async fetch({ args }) {
+  translucent: true,
+  async fetch({ args, page }) {
     let json = await wbw.getWallpapers()
     let wallpapers = wbw.humanizeWallpapers(json)
     console.log(wallpapers)
     return wallpapers.map(item => {
       return {
         title: item.bsTitle,
-        thumb: item.humanizeUrl,
+        image: item.humanizeUrl,
         style: 'gallery',
         summary: item.copyright,
         route: $route('@image', {
-          url: item.humanizeUrl
+          url: item.humanizeUrl,
+          title: item.bsTitle
         })
       }
     })

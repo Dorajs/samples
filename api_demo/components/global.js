@@ -247,6 +247,21 @@ module.exports = {
         }
       },
 
+      // downloder
+      {
+        title: '$downloader',
+        style: 'category'
+      },
+      {
+        title: '下载文件',
+        summary: '$downloader.add(params: DownloadParams)',
+        onClick: () => {
+          $downloader.add({
+            url: 'http://r.cnpmjs.org/@dora.js/api-demo/download/@dora.js/api-demo-1.4.0.tgz',
+            filename: 'api-demo-1.4.0.dora'
+          })
+        }
+      },
       // global
       {
         title: 'global',

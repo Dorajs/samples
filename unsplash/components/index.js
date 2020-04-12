@@ -33,7 +33,7 @@ module.exports = {
         avatar: photo.user.profile_image.small,
         route: $route(photo.user.links.html)
       },
-      thumb: photo.urls.small,
+      image: photo.urls.small,
       color: photo.color,
       aspect: photo.width / photo.height
     }

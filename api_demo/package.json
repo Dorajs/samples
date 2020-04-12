@@ -6,6 +6,7 @@
   "description": "快速体验 Dora.js 提供的各种能力",
   "license": "MIT",
   "homepage": "https://github.com/Dorajs/samples/tree/master/api_demo",
+  "type": "module",
   "author": {
     "name": "linroid",
     "fullname": "Lin Zhang",

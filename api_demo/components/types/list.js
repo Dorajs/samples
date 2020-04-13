@@ -269,19 +269,7 @@ module.exports = {
         content: {
           url: 'https://baidu.com/',
         }
-      },
-      {
-        url: {
-          value:"",
-          headers: {
-            Cookies: "xxxx"
-          }
-        }
-      },
-      {
-        url: "https://foo.com/resource.png"
       }
-
     ]
   },
   simpleOnClick(data) {

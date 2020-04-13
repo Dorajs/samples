@@ -2,10 +2,10 @@
   "uuid": "2f33d8de-c474-4f38-a19b-cf2cab4228cc",
   "name": "@dora.js/api-demo",
   "displayName": "示例扩展",
-  "version": "1.5.1",
+  "version": "1.6.0",
   "description": "快速体验 Dora.js 提供的各种能力",
   "license": "MIT",
-  "updates": "更新 API 示例 (Dora.js 1.6.0-alpha)",
+  "updates": "更新 API 示例 (Dora.js 1.6.0-beta)",
   "homepage": "https://github.com/Dorajs/samples/tree/master/api_demo",
   "author": {
     "name": "linroid",
@@ -19,5 +19,8 @@
     "Dora.js"
   ],
   "icon": "assets/icon.png",
-  "main": "main.js"
+  "main": "main.js",
+  "contributes": {
+    "search": "search"
+  }
 }

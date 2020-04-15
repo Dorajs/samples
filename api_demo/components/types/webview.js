@@ -6,6 +6,7 @@ module.exports = {
   },
   script: 'dom.js',
   fetch() {
+    console.log('webview fetch')
     return {
       url: "https://www.npmjs.com/",
     }

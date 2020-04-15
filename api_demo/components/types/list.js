@@ -103,6 +103,27 @@ module.exports = {
         style: 'icon',
         image: $icon('build', 'green')
       },
+      // dashboard
+      {
+        title: '样式：dashboard',
+        style: 'category'
+      },
+      {
+        style: 'dashboard',
+        image: $icon('memory'),
+        title: '内存使用',
+        summary: '1024 MB',
+        color: '#8B355E',
+        textColor: 'white'
+      },
+      {
+        style: 'dashboard',
+        image: $icon('battery_alert'),
+        title: '电池使用',
+        summary: '1024MB',
+        color: '#81AF37',
+        textColor: 'white'
+      },
       // vod
       {
         title: '样式：vod',
@@ -267,7 +288,7 @@ module.exports = {
         title: '百度一下',
         style: 'richContent',
         content: {
-          url: 'https://baidu.com/',
+          url: 'https://baidu.com/'
         }
       }
     ]

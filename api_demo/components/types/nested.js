@@ -2,7 +2,7 @@ module.exports = {
   type: 'drawer',
   items: [
     {
-      title: 'bottomTab > topTab',
+      title: '-> bottomTab > topTab',
       route: $route('@bottomTab', {
         items: [
           {

@@ -3,6 +3,11 @@ module.exports = {
   fetch() {
     return [
       {
+        title: '组件基础操作',
+        summary: '',
+        route: $route('component_base')
+      },
+      {
         title: 'list',
         summary: '列表组件',
         route: $route('types/list')

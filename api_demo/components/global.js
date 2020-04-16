@@ -201,6 +201,14 @@ module.exports = {
         }
       },
       {
+        title: '删除一个值',
+        summary: '$storage.remove(key: string)',
+        onClick: () => {
+          $storage.remove('author')
+          this.dump($storage.get('author'))
+        }
+      },
+      {
         title: '获取所有存储值',
         summary: '$storage.all(): object',
         onClick: () => {

@@ -2,10 +2,11 @@ const fs = require('fs')
 const path = require('path')
 module.exports = {
   type: 'list',
-  beforeCreate() {
+  async beforeCreate() {
     console.log(this)
     this.title = 'Files'
     this.subtitle = this.route.args.path
+    await $permission.request('sdcard')
   },
   fetch({ args }) {
     console.log(`list files in : ${args.path}`)

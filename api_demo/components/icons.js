@@ -2,6 +2,7 @@ const fs = require('fs')
 module.exports = {
   type: 'list',
   fetch() {
+    console.log(process.cwd())
     let json = fs.readFileSync('assets/icons.json')
     let icons = JSON.parse(json)
     return icons.map(name => {

@@ -278,6 +278,19 @@ module.exports = {
           $ui.toast(`is subscribed: ${result}`)
         }
       },
+      // permission
+      {
+        title: '权限申请',
+        style: 'category'
+      },
+      {
+        title: '申请权限',
+        summary: '$permission.request(family: string)',
+        onClick: async () => {
+          const result = await $permission.request('sdcard')
+          $ui.toast(`申请结果: ${result}`)
+        }
+      },
 
       // // downloder
       // {

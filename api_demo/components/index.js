@@ -8,8 +8,8 @@ module.exports = {
       image: $assets('component.svg')
     },
     {
-      title: '全局函数',
-      route: $route('global'),
+      title: '全局 API',
+      route: $route('api'),
       image: $assets('global.svg')
     },
     {

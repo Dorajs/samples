@@ -89,7 +89,7 @@ module.exports = {
         }
       },
       {
-        title: '进行单向选择',
+        title: '进行单项选择',
         summary: '$input.select(data: object)',
         onClick: async () => {
           let selected = await $input.select({

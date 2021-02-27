@@ -24,6 +24,8 @@
     "search": "search"
   },
   "dependencies": {
-    "sqlite3": "^4.1.1"
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "lru-cache": "^5.1.1"
   }
 }

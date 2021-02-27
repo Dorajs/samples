@@ -16,7 +16,7 @@ module.exports = {
       title: "Send Event",
       onClick: () => {
         console.log(this)
-        this.runScript('$dora.sendEvent("test", "Hello Event")')
+        this.runScript('$dora.sendEvent("test")')
       }
     }, {
       title: "Redirect",

@@ -21,7 +21,13 @@
   "icon": "assets/icon.png",
   "main": "main.js",
   "contributes": {
-    "search": "search"
+    "search": "search",
+    "tasks": {
+      "get_ip": {
+        "icon": "assets/ip.svg",
+        "label": "Sample: 获取外网 IP"
+      }
+    }
   },
   "dependencies": {
     "axios": "^0.19.2",

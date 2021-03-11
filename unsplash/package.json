@@ -3,13 +3,21 @@
   "name": "@dora.js/unsplash",
   "displayName": "Unsplash",
   "version": "1.2.1",
+  "homepage": "https://github.com/Dorajs/samples/tree/master/unsplash",
+  "repository": {
+    "type": "git",
+    "directory": "unsplash",
+    "url": "https://github.com/Dorajs/samples.git"
+  },
   "author": {
-    "name": "linroid"
+    "name": "linroid",
+    "fullname": "Lin Zhang",
+    "email": "linroid@gmail.com"
   },
   "license": "MIT",
   "description": "高清晰度免费图片素材，适用个人和商业",
   "engines": {
-    "dora": ">=1.0.0"
+    "dora": ">=1.8.0"
   },
   "keywords": [
     "Dora.js"

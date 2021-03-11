@@ -1,25 +1,25 @@
 {
   "uuid": "c5258f19-e0a1-4678-9880-04d87a69e0c8",
-  "name": "@dora.js/bing-wallpaper",
+  "name": "@dora.js/bing_wallpaper",
   "displayName": "Bing 每日壁纸",
   "version": "1.1.1",
   "description": "Bing 每日壁纸",
   "icon": "assets/bing.png",
   "prefs": "assets/prefs.json",
   "main": "main.js",
-  "license": "UNLICENSED",
-  "author": {
-    "name": "linroid",
-    "email": "linroid@gmail.com",
-    "url": "https://linroid.com"
-  },
+  "homepage": "https://github.com/Dorajs/samples/tree/master/bing_wallpaper",
   "repository": {
     "type": "git",
-    "url": ""
+    "directory": "bing_wallpaper",
+    "url": "https://github.com/Dorajs/samples.git"
   },
-  "homepage": "",
+  "author": {
+    "name": "linroid",
+    "fullname": "Lin Zhang",
+    "email": "linroid@gmail.com"
+  },
   "engines": {
-    "dora": ">=1.0.0"
+    "dora": ">=1.8.0"
   },
   "keywords": [
     "Dora.js"

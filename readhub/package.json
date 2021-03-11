@@ -5,11 +5,19 @@
   "version": "1.2.5",
   "description": "每天三分钟的科技新闻聚合阅读",
   "license": "MIT",
+  "homepage": "https://github.com/Dorajs/samples/tree/master/readhub",
+  "repository": {
+    "type": "git",
+    "directory": "readhub",
+    "url": "https://github.com/Dorajs/samples.git"
+  },
   "author": {
-    "name": "linroid"
+    "name": "linroid",
+    "fullname": "Lin Zhang",
+    "email": "linroid@gmail.com"
   },
   "engines": {
-    "dora": ">=1.0.0"
+    "dora": ">=1.8.0"
   },
   "keywords": ["Dora.js"],
   "icon": "assets/icon.png",

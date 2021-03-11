@@ -7,6 +7,11 @@
   "license": "MIT",
   "updates": "添加 $permission.request() 示例\n需要升级 Dora.js 到 1.8.0-beta",
   "homepage": "https://github.com/Dorajs/samples/tree/master/api_demo",
+  "repository": {
+    "type": "git",
+    "directory": "api_demo",
+    "url": "https://github.com/Dorajs/samples.git"
+  },
   "author": {
     "name": "linroid",
     "fullname": "Lin Zhang",

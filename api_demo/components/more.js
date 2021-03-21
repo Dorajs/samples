@@ -4,7 +4,7 @@ module.exports = {
     return [{
       title: 'File system',
       route: $route('file', {
-        path: '/'
+        path: `/`
       })
     }]
   }

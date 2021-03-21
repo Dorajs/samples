@@ -262,22 +262,6 @@ module.exports = {
           $ui.toast(`is installed: ${result}`)
         }
       },
-      {
-        title: '订阅一个用户',
-        summary: '$dora.subscribe(userId: string): Promise<boolean>',
-        onClick: async () => {
-          const result = await $dora.subscribe('linroid')
-          $ui.toast(`subscribe result: ${result}`)
-        }
-      },
-      {
-        title: '检查是否订阅了这个用户',
-        summary: '$dora.isSubscribed(userId: string): boolean',
-        onClick: () => {
-          const result = $dora.isSubscribed('linroid')
-          $ui.toast(`is subscribed: ${result}`)
-        }
-      },
       // permission
       {
         title: '权限申请',
@@ -292,22 +276,39 @@ module.exports = {
         }
       },
 
-      // // downloder
-      // {
-      //   title: '$downloader',
-      //   style: 'category'
-      // },
-      // {
-      //   title: '下载文件',
-      //   summary: '$downloader.add(params: DownloadParams)',
-      //   onClick: () => {
-      //     $downloader.add({
-      //       url:
-      //         'http://r.cnpmjs.org/@dora.js/api-demo/download/@dora.js/api-demo-1.4.0.tgz',
-      //       filename: 'api-demo-1.4.0.dora'
-      //     })
-      //   }
-      // },
+      // downloder
+      {
+        title: '$downloader',
+        style: 'category'
+      },
+      {
+        title: '下载文件',
+        summary: '$downloader.add(params: DownloadParams)',
+        onClick: () => {
+          $downloader.add({
+            url:'http://r.cnpmjs.org/@dora.js/api-demo/download/@dora.js/api-demo-1.4.0.tgz',
+            filename: 'api-demo-1.4.0.dora',
+            headers: {
+              "User-Agent": "api_demo/1.0.0" 
+            }
+          })
+        }
+      },
+      // downloder
+      {
+        title: '$task',
+        style: 'category'
+      },
+      {
+        title: '执行任务',
+        summary: '$task.add(params: TaskParams)',
+        onClick: () => {
+          $task.schedule({
+            name: 'get_ip',
+            at: Date()
+          })
+        }
+      },
       // global
       {
         title: 'global',

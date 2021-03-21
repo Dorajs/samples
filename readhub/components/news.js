@@ -1,7 +1,7 @@
 module.exports = {
   type: 'list',
   async fetch({ args, page }) {
-    let resp = await $http.get(`https://api.readhub.cn/${args.column}?lastCursor=${page || ''}&pageSize=${this.pageSize}`)
+    let resp = await $axios.get(`https://api.readhub.cn/${args.column}?lastCursor=${page || ''}&pageSize=${this.pageSize}`)
     let list = resp.data.data
     let items = list.map(data => ({
       id: data.id,

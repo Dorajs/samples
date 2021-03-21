@@ -1,7 +1,7 @@
 module.exports = {
   type: 'article',
   async fetch({ args }) {
-    let resp = await $http.get(`https://api.readhub.cn/topic/${args.id}`)
+    let resp = await $axios.get(`https://api.readhub.cn/topic/${args.id}`)
     let data = resp.data
     return {
       content: {
